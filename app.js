@@ -1,3 +1,11 @@
+function checkPass() {
+    var password = document.getElementById("passInput").value;
+    if (password === "Trinh123") { // Thầy nhớ đổi mật khẩu tại đây
+        document.getElementById("login-overlay").style.display = "none";
+    } else {
+        alert("Sai mật khẩu rồi! Các em thử lại nhé.");
+    }
+}
 document.addEventListener('DOMContentLoaded', () => {
     let currentTopic = 'nhiet';
     let currentView = 'theory';
