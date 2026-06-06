@@ -403,32 +403,68 @@ body {
     .opt-btn {
         width: 48%; /* Nút bấm to ra, dễ chạm trên màn hình nhỏ */
     }
-/* Thiết kế màn hình đăng nhập */
+/* Giao diện đăng nhập mới - Hiện đại và bắt mắt */
 #login-overlay {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: #2c3e50;
-    z-index: 99999; /* Đảm bảo nó nằm trên cùng */
+    /* Gradient màu tím xanh hiện đại */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    z-index: 99999;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Inter', sans-serif;
 }
+
 .login-box {
-    background: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
     text-align: center;
-    width: 300px;
+    width: 320px;
+    /* Hiệu ứng mờ nền nhẹ */
+    backdrop-filter: blur(5px);
 }
-.login-box h3 { margin-top: 0; color: #2c3e50; }
+
+.login-box h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
 #passInput {
-    padding: 12px; width: 80%;
-    border: 1px solid #ddd; border-radius: 6px;
-    margin: 15px 0; display: block; margin-left: auto; margin-right: auto;
+    padding: 14px;
+    width: 100%;
+    box-sizing: border-box; /* Giúp input không bị tràn ra ngoài */
+    border: 2px solid #eee;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    transition: border-color 0.3s;
 }
+
+#passInput:focus {
+    border-color: #667eea;
+    outline: none;
+}
+
 .login-btn {
-    padding: 10px 25px; background: #007bff; color: white;
-    border: none; border-radius: 6px; cursor: pointer;
+    padding: 12px 30px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+    width: 100%;
 }
-.login-btn:hover { background: #0056b3; }
+
+.login-btn:hover {
+    background: #5a67d8;
+    transform: translateY(-2px); /* Hiệu ứng nhô lên khi di chuột */
+}
