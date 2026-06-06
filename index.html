@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn Tập Vật Lí 12 | Chương Trình 2018</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            startup: {
+                typeset: false // Tắt tự động render ban đầu để JS kiểm soát
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header class="app-header">
+        <div class="container">
+            <h1>Chuyên đề Vật Lí 12</h1>
+            <nav class="main-tabs" id="mainTabs">
+                <button class="tab-btn active" data-topic="nhiet">Vật lí nhiệt</button>
+                <button class="tab-btn" data-topic="khi">Khí lí tưởng</button>
+                <button class="tab-btn" data-topic="tu">Từ trường</button>
+                <button class="tab-btn" data-topic="hatnhan">VL Hạt nhân</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="sub-tabs" id="subTabs">
+            <button class="sub-tab-btn active" data-view="theory">Kiến thức trọng tâm</button>
+            <button class="sub-tab-btn" data-view="quiz">Bài tập rèn luyện</button>
+        </div>
+
+        <section id="contentArea" class="content-area">
+            </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

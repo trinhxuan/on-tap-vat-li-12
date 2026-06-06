@@ -1,0 +1,406 @@
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --correct-bg: #dcfce7;
+    --correct-border: #22c55e;
+    --wrong-bg: #fee2e2;
+    --wrong-border: #ef4444;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header & Tabs */
+.app-header {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding-top: 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.app-header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.main-tabs, .sub-tabs {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.sub-tabs {
+    margin: 1.5rem 0;
+    justify-content: center;
+}
+
+.tab-btn, .sub-tab-btn {
+    flex: 1;
+    min-width: fit-content;
+    padding: 0.75rem 1rem;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.sub-tab-btn {
+    flex: 0 1 auto;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--card-bg);
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.sub-tab-btn.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Question Cards */
+.question-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.question-context {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.statement {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    gap: 1rem;
+}
+
+.statement-text {
+    flex: 1;
+}
+
+.options label {
+    margin-left: 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* Trạng thái kết quả */
+.statement.correct {
+    background-color: var(--correct-bg);
+    border-color: var(--correct-border);
+}
+
+.statement.wrong {
+    background-color: var(--wrong-bg);
+    border-color: var(--wrong-border);
+}
+
+.btn-check {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.btn-check:hover {
+    background-color: var(--primary-hover);
+}
+
+.explanation {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f1f5f9;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 0 8px 8px 0;
+    display: none;
+}
+
+.explanation.show {
+    display: block;
+}
+
+/* =========================================
+   GIAO DIỆN KIẾN THỨC TRỌNG TÂM (THEORY UI)
+   ========================================= */
+
+/* Hiệu ứng mờ dần khi chuyển Tab */
+.theory-content {
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* 1. Thẻ bài học chính (Card layout) */
+.lesson-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lesson-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+
+/* 2. Tiêu đề bài học (Gradient cuốn hút) */
+.lesson-card h3 {
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+    padding: 0.8rem 1.25rem;
+    border-radius: 8px;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+    display: inline-block;
+    width: 100%;
+}
+
+/* 3. Khung nội dung/Khái niệm nhỏ bên trong */
+.concept-box {
+    background: #f8fafc;
+    border-left: 4px solid var(--primary-color);
+    padding: 1.25rem;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 1.25rem;
+}
+
+/* Thêm icon đinh ghim trước các mục nhỏ */
+.concept-box h4 {
+    color: var(--text-main);
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.concept-box h4::before {
+    content: "📌";
+    font-size: 1.1rem;
+}
+
+/* 4. Khung chứa công thức (Nổi bật, dễ nhìn) */
+.formula-box {
+    background: #f0fdf4;
+    border: 2px dashed #22c55e;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem auto;
+    font-size: 1.15rem;
+    color: #166534;
+    overflow-x: auto; /* Cuộn ngang nếu công thức dài trên mobile */
+}
+
+/* 5. Các hộp lưu ý / Highlight */
+.highlight-box {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+/* Lưu ý Vàng */
+.golden-note {
+    background: #fffbeb;
+    border-color: #fde68a;
+    border-left: 4px solid #f59e0b;
+}
+.golden-note strong {
+    color: #d97706;
+}
+
+/* 6. Hộp Phân tích Sai lầm & Khắc phục */
+.mistake-box {
+    background-color: #fef2f2;
+    border-left: 4px solid #ef4444;
+    color: #991b1b;
+    padding: 1rem 1.25rem;
+    border-radius: 0 8px 8px 0;
+    margin: 1.5rem 0 0.5rem 0;
+    font-size: 0.95rem;
+}
+.mistake-box strong { color: #b91c1c; }
+
+.fix-box {
+    background-color: #f0fdf4;
+    border-left: 4px solid #22c55e;
+    color: #166534;
+    padding: 1rem 1.25rem;
+    border-radius: 0 8px 8px 0;
+    margin: 0 0 1.5rem 0;
+    font-size: 0.95rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+.fix-box strong { color: #15803d; }
+
+/* 7. LÀM ĐẸP BẢNG BIỂU */
+.table-responsive {
+    overflow-x: auto;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.03);
+}
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    overflow: hidden; /* Giữ bo góc cho table */
+    min-width: 400px;
+}
+.styled-table thead tr {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th, .styled-table td {
+    padding: 12px 15px;
+    border: 1px solid #e2e8f0;
+}
+.styled-table tbody tr {
+    background-color: #ffffff;
+}
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f8fafc; /* Hiệu ứng dòng đậm dòng nhạt */
+}
+.styled-table tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+/* 8. Định dạng chung cho Text, List */
+.theory-content h2 {
+    color: var(--text-main);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+.theory-content ul {
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+}
+.theory-content li {
+    margin-bottom: 0.5rem;
+}
+
+/* --- GIAO DIỆN ĐIỆN THOẠI CHO BÀI TẬP --- */
+/* Bố cục mới cho statement */
+.statement {
+    display: flex;
+    flex-direction: column; /* Xếp dọc: Row ở trên, Lời giải ở dưới */
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.stmt-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+}
+
+.statement-text {
+    flex: 1;
+}
+
+/* Khung giải thích chi tiết cho từng ý */
+.stmt-explanation {
+    display: none; /* Ẩn mặc định */
+    width: 100%;
+    margin-top: 12px;
+    padding: 10px 14px;
+    background-color: #f8fafc;
+    border-left: 3px solid var(--primary-color);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: #334155;
+    animation: slideDown 0.3s ease;
+}
+
+.stmt-explanation.show {
+    display: block;
+}
+
+.stmt-explanation strong {
+    color: var(--primary-color);
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- GIAO DIỆN ĐIỆN THOẠI CHO BÀI TẬP --- */
+@media (max-width: 600px) {
+    .stmt-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    .options {
+        width: 100%;
+        display: flex;
+        justify-content: space-between; /* Dàn đều 2 nút sang 2 bên */
+        margin-top: 0.5rem;
+    }
+    .opt-btn {
+        width: 48%; /* Nút bấm to ra, dễ chạm trên màn hình nhỏ */
+    }
+}
