@@ -403,7 +403,7 @@ body {
     .opt-btn {
         width: 48%; /* Nút bấm to ra, dễ chạm trên màn hình nhỏ */
     }
-}
+	}
 /* Giao diện đăng nhập mới - Hiện đại và bắt mắt */
 #login-overlay {
     position: fixed;
