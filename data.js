@@ -417,6 +417,206 @@ const physicsData = {
                     { id: "c", text: "c) Biểu thức tính nhiệt hóa hơi riêng theo phương án này (coi hao phí bằng 0) là $L = \\frac{P \\cdot \\Delta t}{\\Delta m}$.", isTrue: true, exp: "Đúng (Bản chất $Q = P \\cdot \\Delta t = L \\cdot \\Delta m$)." },
                     { id: "d", text: "d) Để giảm bớt sai số do nước bắn ra ngoài dưới dạng giọt lỏng (không phải hóa hơi), học sinh cần đổ nước thật đầy lên tận miệng ấm trước khi đun.", isTrue: false, exp: "Sai (Đổ nước đầy quá miệng ấm thì khi sôi nước sẽ sục mạnh trào trực tiếp ra ngoài ở thể lỏng, làm $\\Delta m$ đo được bị sai số cực lớn. Phải để mực nước vừa phải)." }
                 ]
+            },
+			{
+            id: 'q21',
+            context: 'Một nhóm học sinh làm mô hình và thảo luận về cấu trúc của các loại chất rắn khác nhau (chất rắn kết tinh và chất rắn vô định hình) dựa trên mô hình động học phân tử.',
+            statements: [
+                { id: 'a', text: 'Trong chất rắn kết tinh, các hạt liên kết chặt chẽ và dao động quanh các vị trí cân bằng cố định xác định.', isTrue: true, exp: 'ĐÚNG. Đây là đặc điểm cơ bản của chất rắn kết tinh (có cấu trúc định xứ tuần hoàn).' },
+                { id: 'b', text: 'Khi nhiệt độ tăng, biên độ dao động của các ion tại nút mạng tinh thể giảm đi làm cho cấu trúc vật rắn bền vững hơn.', isTrue: false, exp: 'SAI. Khi nhiệt độ tăng, các hạt nhận thêm nhiệt năng nên biên độ dao động tăng lên, khoảng cách trung bình tăng dẫn đến sự nở vì nhiệt.' },
+                { id: 'c', text: 'Vật rắn vô định hình không có nhiệt độ nóng chảy xác định; khi bị nung nóng chúng mềm đi rồi chuyển dần sang thể lỏng.', isTrue: true, exp: 'ĐÚNG. Chất rắn vô định hình không có cấu trúc tinh thể nên không có điểm nóng chảy cố định mà có một khoảng nhiệt độ hóa mềm.' },
+                { id: 'd', text: 'Thủy tinh, nhựa đường và các kim loại như đồng, sắt đều là những ví dụ điển hình của chất rắn vô định hình.', isTrue: false, exp: 'SAI. Thủy tinh, nhựa đường là chất rắn vô định hình, nhưng đồng và sắt là chất rắn kết tinh (kim loại có cấu trúc tinh thể).' }
+            ]
+        },
+        {
+            id: 'q22',
+            context: 'Một khối chất rắn có khối lượng 0,5 kg ban đầu ở 0°C được cung cấp nhiệt lượng bằng một bếp điện có công suất không đổi P = 500 W. Tiến trình thay đổi nhiệt độ theo thời gian của khối chất được ghi nhận qua đồ thị: Giai đoạn 1 (từ phút thứ 0 đến phút thứ 4): Nhiệt độ tăng đều từ 0°C lên 100°C. Giai đoạn 2 (từ phút thứ 4 đến phút thứ 14): Nhiệt độ không đổi ở mức 100°C.',
+            statements: [
+                { id: 'a', text: 'Trong suốt giai đoạn 2, khối chất không hề hấp thụ nhiệt lượng từ bếp điện vì nhiệt độ của nó không tăng.', isTrue: false, exp: 'SAI. Trong giai đoạn 2 (nóng chảy), chất vẫn nhận nhiệt liên tục từ bếp nhưng nhiệt lượng này dùng để phá vỡ các liên kết tinh thể chứ không dùng để tăng động năng phân tử (nhiệt độ).' },
+                { id: 'b', text: 'Nhiệt lượng mà khối chất nhận được trong 4 phút đầu tiên để tăng nhiệt độ từ 0°C lên 100°C là 120.000 J.', isTrue: true, exp: 'ĐÚNG. $Q_1 = P \\cdot t_1 = 500$ W $\\cdot (4 \\cdot 60$ s) = 120.000 J.' },
+                { id: 'c', text: 'Nhiệt dung riêng của chất này ở thể rắn xấp xỉ 2400 J/(kg.K).', isTrue: true, exp: 'ĐÚNG. Ta có $Q_1 = m \\cdot c \\cdot \\Delta t \\Rightarrow 120.000 = 0,5 \\cdot c \\cdot (100 - 0) \\Rightarrow c = 2400$ J/(kg.K).' },
+                { id: 'd', text: 'Nhiệt nóng chảy riêng của chất này được xác định từ thực nghiệm trên là $\\lambda = 6,0 \\cdot 10^5$ J/kg.', isTrue: true, exp: 'ĐÚNG. Thời gian nóng chảy là $\\Delta t = 14 - 4 = 10$ phút = 600 s. Nhiệt lượng cung cấp: $Q_2 = 500 \\cdot 600 = 300.000$ J. Suy ra $\\lambda = \\frac{Q_2}{m} = \\frac{300.000}{0,5} = 6,0 \\cdot 10^5$ J/kg.' }
+            ]
+        },
+        {
+            id: 'q23',
+            context: 'Trong một xô cách nhiệt có chứa cục đá khối lượng $m_1$ = 2 kg ở nhiệt độ $t_1$ = -10°C. Người ta đổ thêm vào xô $m_2$ = 1 kg nước ở nhiệt độ $t_2$ = 40°C. Cho biết nhiệt dung riêng của đá $c_1$ = 2100 J/(kg.K), của nước $c_2$ = 4200 J/(kg.K), nhiệt nóng chảy riêng của đá $\\lambda = 3,4 \\cdot 10^5$ J/kg. Bỏ qua sự trao đổi nhiệt với xô và môi trường.',
+            statements: [
+                { id: 'a', text: 'Nhiệt lượng tối thiểu để toàn bộ cục đá tăng nhiệt độ từ -10°C lên 0°C là 42.000 J.', isTrue: true, exp: 'ĐÚNG. $Q_{\\text{thu1}} = m_1 \\cdot c_1 \\cdot (0 - (-10)) = 2 \\cdot 2100 \\cdot 10 = 42.000$ J.' },
+                { id: 'b', text: 'Khi hạ nhiệt độ từ 40°C xuống thành nước ở 0°C, nước tỏa ra một nhiệt lượng tối đa là 168.000 J.', isTrue: true, exp: 'ĐÚNG. $Q_{\\text{tỏa1}} = m_2 \\cdot c_2 \\cdot (40 - 0) = 1 \\cdot 4200 \\cdot 40 = 168.000$ J.' },
+                { id: 'c', text: 'Do nhiệt lượng nước tỏa ra lớn hơn nhiệt lượng đá thu vào để đạt 0°C, toàn bộ khối đá 2 kg sẽ bị tan chảy hoàn toàn.', isTrue: false, exp: 'SAI. Nhiệt lượng còn dư để làm tan đá là $\\Delta Q = 168.000 - 42.000 = 126.000$ J. Nhiệt lượng cần để tan hết đá là $Q_{\\text{tan hết}} = m_1 \\cdot \\lambda = 2 \\cdot 3,4 \\cdot 10^5 = 680.000$ J. Vì $\\Delta Q < Q_{\\text{tan hết}}$ nên đá chỉ tan một phần.' },
+                { id: 'd', text: 'Khi hệ đạt trạng thái cân bằng nhiệt, nhiệt độ cuối cùng của hệ là 0°C và khối lượng đá còn lại trong xô là 1,63 kg.', isTrue: true, exp: 'ĐÚNG. Vì đá chưa tan hết nên hệ dừng lại ở 0°C. Khối lượng đá bị tan: $\\Delta m = \\frac{\\Delta Q}{\\lambda} = \\frac{126.000}{340.000} \\approx 0,37$ kg. Khối lượng đá còn lại: 2 - 0,37 = 1,63 kg.' }
+            ]
+        },
+        {
+            id: 'q24',
+            context: 'Một học sinh làm thí nghiệm xác định nhiệt hóa hơi riêng của nước. Học sinh dùng bếp điện (loại 250 W) đun 0,4 kg nước đựng trong một chiếc cốc đạt tới nhiệt độ sôi 100°C. Tiếp tục đun sôi trong đúng 5 phút thì thấy khối lượng nước trong cốc giảm đi còn lại 0,34 kg. Giả sử có 20% nhiệt lượng từ bếp bị thất thoát ra không khí.',
+            statements: [
+                { id: 'a', text: 'Khối lượng nước đã biến thành hơi trong giai đoạn đun sôi là 0,06 kg.', isTrue: true, exp: 'ĐÚNG. $\\Delta m = 0,4 - 0,34 = 0,06$ kg.' },
+                { id: 'b', text: 'Tổng điện năng mà bếp điện đã tiêu thụ trong thời gian đun sôi 5 phút là 75.000 J.', isTrue: true, exp: 'ĐÚNG. $A = P \\cdot t = 250$ W $\\cdot (5 \\cdot 60$ s) = 75.000 J.' },
+                { id: 'c', text: 'Nhiệt lượng thực tế mà khối nước nhận được để hóa hơi trong 5 phút đó là 60.000 J.', isTrue: true, exp: 'ĐÚNG. Do hao phí 20%, hiệu suất bếp là 80%. Nhiệt lượng nước nhận: $Q = A \\cdot 80\\% = 75.000 \\cdot 0,8 = 60.000$ J.' },
+                { id: 'd', text: 'Giá trị nhiệt hóa hơi riêng của nước tính toán được từ thí nghiệm này là $2,26 \\cdot 10^6$ J/kg.', isTrue: false, exp: 'SAI. Nhiệt hóa hơi riêng tính từ thực nghiệm: $L = \\frac{Q}{\\Delta m} = \\frac{60.000}{0,06} = 1,0 \\cdot 10^6$ J/kg (thấp hơn giá trị chuẩn do sai số thực nghiệm thiết lập).' }
+            ]
+        },
+        {
+            id: 'q25',
+            context: 'Xét các hiện tượng bề mặt của chất lỏng liên quan đến lực căng bề mặt, hiện tượng dính ướt và không dính ướt trong đời sống và kỹ thuật.',
+            statements: [
+                { id: 'a', text: 'Lực căng bề mặt luôn có phương vuông góc với bề mặt tự do của chất lỏng và có xu hướng làm tăng diện tích bề mặt đó.', isTrue: false, exp: 'SAI. Lực căng bề mặt có phương tiếp tuyến với bề mặt tự do và có xu hướng làm co nhỏ diện tích bề mặt chất lỏng.' },
+                { id: 'b', text: 'Nước không dính ướt lá dọc mùng (hoặc lá sen) vì lực hút giữa các phân tử nước với nhau mạnh hơn lực hút giữa các phân tử nước và phân tử lá.', isTrue: true, exp: 'ĐÚNG. Đây là nguyên lý giải thích hiện tượng không dính ướt.' },
+                { id: 'c', text: 'Hiện tượng mao dẫn chỉ xảy ra khi chất lỏng không dính ướt thành bình làm mực chất lỏng trong ống dâng cao lên.', isTrue: false, exp: 'SAI. Hiện tượng mao dẫn xảy ra với cả hai trường hợp: dính ướt (mực chất lỏng dâng lên) và không dính ướt (mực chất lỏng hạ xuống).' },
+                { id: 'd', text: 'Các giọt sương buổi sớm có dạng hình cầu gần như hoàn chỉnh chủ yếu là do tác dụng của lực căng bề mặt muốn thu nhỏ diện tích bề mặt của giọt nước.', isTrue: true, exp: 'ĐÚNG. Với một thể tích cho trước, hình cầu là hình có diện tích bề mặt nhỏ nhất. Lực căng bề mặt kéo các phân tử vào trong khiến giọt nước có dạng hình cầu.' }
+            ]
+        },
+        {
+            id: 'q26',
+            context: 'Một lượng khí lý tưởng được giữ trong một xi-lanh có pít-tông dịch chuyển được. Xét các quá trình biến đổi trạng thái của khối khí theo hệ thức định luật 1 Nhiệt động lực học dưới dạng $\\Delta U = A + Q$ (với quy ước: A > 0 khi hệ nhận công, Q > 0 khi hệ nhận nhiệt).',
+            statements: [
+                { id: 'a', text: 'Nếu khối khí bị nén đẳng nhiệt thì $\\Delta U = 0$, đồng thời công A > 0 và nhiệt lượng Q < 0.', isTrue: true, exp: 'ĐÚNG. Đẳng nhiệt của khí lý tưởng $\\Rightarrow \\Delta U = 0$. Khí bị nén $\\Rightarrow$ nhận công A > 0. Từ $\\Delta U = A + Q \\Rightarrow Q = -A < 0$ (khí tỏa nhiệt).' },
+                { id: 'b', text: 'Trong quá trình biến đổi đẳng tích, nếu ta truyền nhiệt cho khối khí thì toàn bộ nhiệt lượng này chỉ làm tăng nội năng của khí ($\\Delta U = Q$).', isTrue: true, exp: 'ĐÚNG. Đẳng tích $\\Rightarrow \\Delta V = 0 \\Rightarrow A = 0$. Do đó $\\Delta U = Q$.' },
+                { id: 'c', text: 'Khi khối khí tự giãn nở sinh công 200 J và đồng thời tỏa ra nhiệt lượng 50 J thì nội năng của khí tăng một lượng 150 J.', isTrue: false, exp: 'SAI. Khí tự sinh công $\\Rightarrow A = -200$ J. Khí tỏa nhiệt $\\Rightarrow Q = -50$ J. Độ biến thiên nội năng $\\Delta U = A + Q = -200 - 50 = -250$ J (nội năng giảm 250 J).' },
+                { id: 'd', text: 'Một quá trình sinh công mà không trao đổi nhiệt với môi trường bên ngoài (Q = 0) được gọi là quá trình đoạn nhiệt.', isTrue: true, exp: 'ĐÚNG. Định nghĩa chính xác của quá trình đoạn nhiệt.' }
+            ]
+        },
+        {
+            id: 'q27',
+            context: 'Một khối khí lý tưởng thực hiện một quá trình giãn nở từ trạng thái 1 có ($p_1 = 3 \\cdot 10^5$ Pa, $V_1$ = 2 lít) đến trạng thái 2 có ($p_2 = 1 \\cdot 10^5$ Pa, $V_2$ = 5 lít). Đường biểu diễn quá trình này trên hệ tọa độ p-V là một đoạn thẳng.',
+            statements: [
+                { id: 'a', text: 'Thể tích ban đầu và thể tích lúc sau của khối khí đổi ra đơn vị chuẩn lần lượt là $2 \\cdot 10^{-3} \\text{ m}^3$ và $5 \\cdot 10^{-3} \\text{ m}^3$.', isTrue: true, exp: 'ĐÚNG. Đổi đơn vị chuẩn: 1 lít = 1 dm³ = $10^{-3} \\text{ m}^3$.' },
+                { id: 'b', text: 'Công mà khối khí này nhận vào từ ngoại lực trong suốt quá trình trên có giá trị là +600 J.', isTrue: false, exp: 'SAI. Công do khí thực hiện (sinh công) tương ứng với diện tích hình thang dưới đồ thị: $A\' = \\frac{(p_1 + p_2) \\cdot (V_2 - V_1)}{2} = \\frac{(3 + 1) \\cdot 10^5 \\cdot (5 - 2) \\cdot 10^{-3}}{2} = 600$ J. Theo quy ước, hệ sinh công thì công nhận vào phải âm: A = -600 J.' },
+                { id: 'c', text: 'Trong quá trình trên, vì áp suất giảm liên tục từ trạng thái 1 đến trạng thái 2 nên khối khí không thể sinh công.', isTrue: false, exp: 'SAI. Khí tăng thể tích từ 2 lít lên 5 lít nên nó luôn sinh công, bất kể áp suất tăng hay giảm.' },
+                { id: 'd', text: 'Diện tích hình thang giới hạn bởi đoạn thẳng nối hai trạng thái trên đồ thị và trục hoành OV biểu diễn độ lớn của công mà khí trao đổi.', isTrue: true, exp: 'ĐÚNG. Ý nghĩa hình học của công trong hệ tọa độ p-V.' }
+            ]
+        },
+        {
+            id: 'q28',
+            context: 'Một lượng khí lý tưởng thực hiện một chu trình biến đổi kín 1 → 2 → 3 → 1 được biểu diễn trên đồ thị p-V. Quá trình 1 → 2 là đẳng áp, quá trình 2 → 3 là đẳng tích, và quá trình 3 → 1 là một đoạn thẳng. Biết các thông số: $p_1 = p_2 = 4 \\cdot 10^5$ Pa, $p_3 = 1 \\cdot 10^5$ Pa, $V_1$ = 1 lít, $V_2 = V_3$ = 3 lít.',
+            statements: [
+                { id: 'a', text: 'Tổng độ biến thiên nội năng $\\Delta U$ của khối khí sau khi thực hiện trọn vẹn một chu trình kín bằng 0.', isTrue: true, exp: 'ĐÚNG. Trạng thái đầu và trạng thái cuối của một chu trình trùng nhau nên nội năng không đổi $\\Rightarrow \\Delta U_{\\text{chu trình}} = 0$.' },
+                { id: 'b', text: 'Trong giai đoạn biến đổi đẳng tích 2 → 3, công mà khối khí thực hiện là bằng 0.', isTrue: true, exp: 'ĐÚNG. Quá trình đẳng tích thì thể tích không đổi nên hệ không sinh công hay nhận công ($A_{23} = 0$).' },
+                { id: 'c', text: 'Công ròng mà khối khí sinh ra cho môi trường ngoài trong cả chu trình này bằng 300 J.', isTrue: true, exp: 'ĐÚNG. Công ròng bằng diện tích tam giác 123 bao bởi chu trình: $A\' = \\frac{1}{2} \\cdot (V_2 - V_1) \\cdot (p_1 - p_3) = \\frac{1}{2} \\cdot (3 - 1) \\cdot 10^{-3} \\cdot (4 - 1) \\cdot 10^5 = 300$ J. Do chu trình đi theo chiều kim đồng hồ nên hệ sinh công ròng 300 J.' },
+                { id: 'd', text: 'Tổng nhiệt lượng mà khối khí trao đổi trong cả chu trình là Q = -300 J (hệ tỏa nhiệt ròng).', isTrue: false, exp: 'SAI. Theo ĐL1: $\\Delta U = A + Q \\Rightarrow 0 = -A\' + Q \\Rightarrow Q = A\' = +300$ J. Hệ nhận nhiệt ròng 300 J để chuyển hóa thành công ròng.' }
+            ]
+        },
+        {
+            id: 'q29',
+            context: 'Một kỹ sư chạy thử nghiệm một động cơ nhiệt lý tưởng hoạt động theo chu trình Carnot. Động cơ này nhận nhiệt lượng $Q_1$ = 50 kJ từ nguồn nóng có nhiệt độ 127°C và truyền một phần nhiệt lượng cho nguồn lạnh có nhiệt độ 27°C.',
+            statements: [
+                { id: 'a', text: 'Nhiệt độ tuyệt đối của nguồn nóng và nguồn lạnh lần lượt là 400 K và 300 K.', isTrue: true, exp: 'ĐÚNG. $T_1 = 127 + 273 = 400$ K, $T_2 = 27 + 273 = 300$ K.' },
+                { id: 'b', text: 'Hiệu suất cực đại theo lý thuyết của động cơ nhiệt này đạt mức 25%.', isTrue: true, exp: 'ĐÚNG. $\\eta = 1 - \\frac{T_2}{T_1} = 1 - \\frac{300}{400} = 0,25 = 25\\%$.' },
+                { id: 'c', text: 'Công hữu ích tối đa mà động cơ có thể sinh ra trong mỗi chu trình là 12,5 kJ.', isTrue: true, exp: 'ĐÚNG. $A_{\\text{max}} = \\eta \\cdot Q_1 = 0,25 \\cdot 50$ kJ = 12,5 kJ.' },
+                { id: 'd', text: 'Để tăng hiệu suất của động cơ này, phương án hiệu quả nhất là đồng thời giảm nhiệt độ nguồn nóng và tăng nhiệt độ nguồn lạnh.', isTrue: false, exp: 'SAI. Công thức hiệu suất $\\eta = 1 - \\frac{T_2}{T_1}$. Để tăng $\\eta$, ta phải tăng nhiệt độ nguồn nóng $T_1$ hoặc giảm nhiệt độ nguồn lạnh $T_2$.' }
+            ]
+        },
+        {
+            id: 'q30',
+            context: 'Khí Helium (được xem là khí lý tưởng đơn nguyên tử, khối lượng mol M = 4 g/mol) có khối lượng m = 8 g được chứa trong một bình vỏ mỏng. Người ta đun nóng khối khí này để nhiệt độ tuyệt đối của nó tăng lên từ 300 K đến 400 K. Cho hằng số khí lý tưởng R = 8,31 J/(mol.K).',
+            statements: [
+                { id: 'a', text: 'Số mol khí Helium có trong bình là 2 mol.', isTrue: true, exp: 'ĐÚNG. $n = \\frac{m}{M} = \\frac{8}{4} = 2$ mol.' },
+                { id: 'b', text: 'Độ tăng nhiệt độ $\\Delta T$ của khối khí theo thang Kelvin lớn hơn độ tăng nhiệt độ $\\Delta t$ của nó theo thang Celsius.', isTrue: false, exp: 'SAI. Khoảng chia trong thang Kelvin và Celsius là như nhau nên $\\Delta T = \\Delta t = 100°$.' },
+                { id: 'c', text: 'Đối với khí lý tưởng đơn nguyên tử, công thức tính nội năng là $U = \\frac{3}{2}nRT$.', isTrue: true, exp: 'ĐÚNG. Khí đơn nguyên tử chỉ có 3 bậc tự do tịnh tiến, nội năng được xác định bằng hệ thức này.' },
+                { id: 'd', text: 'Độ biến thiên nội năng $\\Delta U$ của khối khí Helium trong quá trình đun nóng trên bằng 2493 J.', isTrue: true, exp: 'ĐÚNG. $\\Delta U = \\frac{3}{2} n R \\Delta T = \\frac{3}{2} \\cdot 2 \\cdot 8,31 \\cdot (400 - 300) = 2493$ J.' }
+            ]
+        },
+        {
+            id: 'q31',
+            context: 'Mô hình động học phân tử khí lý tưởng cho phép giải thích áp suất và nhiệt độ dựa trên chuyển động hỗn loạn của các phân tử. Xét một khối khí hydrogen cố định trong bình kín.',
+            statements: [
+                { id: 'a', text: 'Nhiệt độ tuyệt đối của khối khí là đại diện và tỉ lệ thuận với động năng tịnh tiến trung bình của các phân tử khí.', isTrue: true, exp: 'ĐÚNG. Theo công thức $\\bar{E}_đ = \\frac{3}{2}kT$, nhiệt độ tuyệt đối đo lường mức độ chuyển động nhiệt.' },
+                { id: 'b', text: 'Nếu nhiệt độ của khối khí tăng từ 27°C lên 54°C thì động năng tịnh tiến trung bình của phân tử tăng gấp đôi.', isTrue: false, exp: 'SAI. Động năng tỉ lệ thuận với nhiệt độ tuyệt đối (Kelvin). $T_1 = 300$ K tăng lên $T_2 = 327$ K (không phải tăng gấp đôi).' },
+                { id: 'c', text: 'Áp suất khí lên thành bình được gây ra bởi sự va chạm của một số lượng khổng lồ các phân tử khí lên thành bình trong mỗi giây.', isTrue: true, exp: 'ĐÚNG. Đây chính là bản chất vi mô của áp suất khí lý tưởng.' },
+                { id: 'd', text: 'Ở cùng một nhiệt độ, phân tử khí nào có khối lượng lớn hơn thì tốc độ chuyển động nhiệt trung bình sẽ nhỏ hơn.', isTrue: true, exp: 'ĐÚNG. Vì $\\bar{E}_đ = \\frac{1}{2}m\\overline{v^2} = \\frac{3}{2}kT \\Rightarrow v_{\\text{rms}} = \\sqrt{\\frac{3kT}{m}}$. Khối lượng m càng lớn thì tốc độ hiệu dụng càng nhỏ.' }
+            ]
+        },
+        {
+            id: 'q32',
+            context: 'Hai bình thủy tinh dung tích $V_A$ = 3 lít và $V_B$ = 4 lít được nối với nhau bằng một ống nhỏ có khóa, ban đầu khóa đóng. Bình A chứa khí lý tưởng ở áp suất $p_A$ = 2 atm, bình B chứa cùng loại khí đó ở áp suất $p_B$ = 1 atm. Nhiệt độ ở cả hai bình được giữ không đổi suốt quá trình thí nghiệm. Người ta mở khóa nhẹ nhàng để khí hai bình thông nhau.',
+            statements: [
+                { id: 'a', text: 'Quá trình khí khuếch tán giữa hai bình sau khi mở khóa là một quá trình đẳng nhiệt của hệ khí.', isTrue: true, exp: 'ĐÚNG. Đề bài cho biết nhiệt độ được giữ không đổi suốt quá trình.' },
+                { id: 'b', text: 'Thể tích tổng cộng của hệ sau khi mở khóa là V = 7 lít.', isTrue: true, exp: 'ĐÚNG. $V = V_A + V_B = 3 + 4 = 7$ lít.' },
+                { id: 'c', text: 'Do áp suất bình A lớn hơn bình B nên sau khi mở khóa, toàn bộ khí từ bình B sẽ bị ép sang bình A.', isTrue: false, exp: 'SAI. Khí sẽ dịch chuyển từ nơi có áp suất cao (bình A) sang nơi áp suất thấp (bình B) cho đến khi áp suất hai bên cân bằng nhau.' },
+                { id: 'd', text: 'Áp suất của hệ khí khi đạt trạng thái cân bằng mới là 1,5 atm.', isTrue: false, exp: 'SAI. Theo định luật Boyle-Mariotte mở rộng: $p \\cdot V = p_A \\cdot V_A + p_B \\cdot V_B \\Rightarrow p \\cdot 7 = (2 \\cdot 3) + (1 \\cdot 4) = 10 \\Rightarrow p = \\frac{10}{7} \\approx 1,43$ atm.' }
+            ]
+        },
+        {
+            id: 'q33',
+            context: 'Một bình chứa khí Oxygen ($O_2$, khối lượng mol M = 32 g/mol) có dung tích không đổi V = 10 lít. Ban đầu, khí trong bình có áp suất $p_1 = 10^6$ Pa và nhiệt độ $t_1$ = 27°C. Sau một thời gian tiêu thụ khí, áp suất giảm xuống còn $p_2 = 2,5 \\cdot 10^5$ Pa và nhiệt độ hạ xuống $t_2$ = 7°C. Lấy hằng số khí lý tưởng R = 8,31 J/(mol.K).',
+            statements: [
+                { id: 'a', text: 'Số mol khí Oxy ban đầu chứa trong bình xấp xỉ bằng 4,01 mol.', isTrue: true, exp: 'ĐÚNG. $n_1 = \\frac{p_1 \\cdot V}{R \\cdot T_1} = \\frac{10^6 \\cdot (10 \\cdot 10^{-3})}{8,31 \\cdot 300} \\approx 4,01$ mol. Khối lượng ban đầu: $m_1 = n_1 \\cdot 32 \\approx 128,3$ g.' },
+                { id: 'b', text: 'Khối lượng khí Oxy còn lại trong bình sau khi sử dụng là khoảng 34,4 g.', isTrue: true, exp: 'ĐÚNG. $m_2 = \\frac{p_2 \\cdot V \\cdot M}{R \\cdot T_2} = \\frac{2,5 \\cdot 10^5 \\cdot 10^{-2} \\cdot 32 \\cdot 10^{-3}}{8,31 \\cdot 280} \\approx 0,0344 \\text{ kg} = 34,4$ g.' },
+                { id: 'c', text: 'Khối lượng khí Oxy đã được lấy ra khỏi bình để sử dụng bằng 93,9 g.', isTrue: true, exp: 'ĐÚNG. Khối lượng khí đã lấy ra: $\\Delta m = m_1 - m_2 = 128,3 - 34,4 = 93,9$ g.' },
+                { id: 'd', text: 'Nếu tiếp tục giữ nguyên lượng khí còn lại này và nung nóng bình trở lại nhiệt độ 27°C thì áp suất khí sẽ vượt quá áp suất ban đầu $p_1$.', isTrue: false, exp: 'SAI. Lượng khí lúc sau ít hơn ban đầu rất nhiều (34,4 g < 128,3 g). Khi đưa về cùng nhiệt độ 27°C như ban đầu, theo định luật Charles áp suất chỉ tăng lên một chút so với $p_2$ và vẫn nhỏ hơn nhiều so với $p_1$.' }
+            ]
+        },
+        {
+            id: 'q34',
+            context: 'Một lượng khí lý tưởng khối lượng không đổi thực hiện biến đổi trạng thái được biểu diễn tuần tự qua đồ thị đường thẳng trong các hệ tọa độ khác nhau.',
+            statements: [
+                { id: 'a', text: 'Trên đồ thị hệ tọa độ (p, V), đường đẳng nhiệt là một đường thẳng đi qua gốc tọa độ.', isTrue: false, exp: 'SAI. Trên đồ thị (p, V), đường đẳng nhiệt là một đường cong Hyperbol.' },
+                { id: 'b', text: 'Trên đồ thị hệ tọa độ (V, T), đường đẳng áp là một đường thẳng nếu kéo dài sẽ đi qua gốc tọa độ O.', isTrue: true, exp: 'ĐÚNG. Theo định luật Charles (đẳng áp), V tỉ lệ thuận với T nên đồ thị V-T là đường thẳng kéo dài đi qua gốc tọa độ.' },
+                { id: 'c', text: 'Khi một khối khí thực hiện quá trình đẳng áp, thể tích của nó tỉ lệ thuận với nhiệt độ tuyệt đối T.', isTrue: true, exp: 'ĐÚNG. Biểu thức định luật Charles: $\\frac{V}{T} = \\text{const} \\Rightarrow V \\sim T$.' },
+                { id: 'd', text: 'Nếu một đường biểu diễn trong hệ tọa độ (p, T) là một đường thẳng song song với trục Op, quá trình đó gọi là quá trình đẳng tích.', isTrue: false, exp: 'SAI. Đường thẳng song song với trục Op tức là áp suất thay đổi nhưng giá trị trên trục hoành OT không đổi, đây phải là quá trình đẳng nhiệt.' }
+            ]
+        },
+        {
+            id: 'q35',
+            context: 'Một học sinh thực hiện thí nghiệm đẩy pít-tông nén một lượng khí lý tưởng trong xi-lanh kín một cách rất từ từ và chậm rãi, xi-lanh làm bằng vật liệu dẫn nhiệt cực tốt ra môi trường phòng (được duy trì nhiệt độ cố định).',
+            statements: [
+                { id: 'a', text: 'Thí nghiệm này có thể được xem gần đúng là một quá trình biến đổi đẳng nhiệt của khối khí.', isTrue: true, exp: 'ĐÚNG. Nén rất chậm và thành bình dẫn nhiệt tốt giúp nhiệt độ khối khí luôn kịp cân bằng với nhiệt độ phòng không đổi.' },
+                { id: 'b', text: 'Khi thể tích khối khí giảm đi một nửa, các phân tử khí bị nén lại gần nhau hơn nên áp suất của khí lên thành bình tăng lên gấp đôi.', isTrue: true, exp: 'ĐÚNG. Theo định luật Boyle-Mariotte, khi nhiệt độ không đổi, áp suất tỉ lệ nghịch với thể tích. V giảm 2 lần thì p tăng 2 lần.' },
+                { id: 'c', text: 'Do pít-tông thực hiện công nén khí nên nội năng của khối khí lý tưởng trong xi-lanh chắc chắn tăng lên sau thí nghiệm.', isTrue: false, exp: 'SAI. Do đây là quá trình đẳng nhiệt, nhiệt độ không đổi nên nội năng của khí lý tưởng không đổi ($\\Delta U = 0$).' },
+                { id: 'd', text: 'Trong quá trình nén này, khối khí đã tỏa ra một nhiệt lượng có độ lớn đúng bằng công mà pít-tông đã thực hiện lên nó.', isTrue: true, exp: 'ĐÚNG. Theo ĐL1: $\\Delta U = A + Q$. Vì $\\Delta U = 0 \\Rightarrow Q = -A$. Khí nhận công A > 0 nên sẽ tỏa ra nhiệt lượng Q có độ lớn bằng A.' }
+            ]
+        },
+        {
+            id: 'q36',
+            context: 'Để chế tạo vỏ phích giữ nước nóng, các kỹ sư cần lựa chọn các vật liệu dựa trên các thông số đặc trưng vật lý nhiệt: Vật liệu X có hệ số dẫn nhiệt 0,02 W/(m.K) và c = 800 J/(kg.K). Vật liệu Y có hệ số dẫn nhiệt 0,80 W/(m.K) và c = 2000 J/(kg.K). Vật liệu Z có hệ số dẫn nhiệt 1,20 W/(m.K) và c = 400 J/(kg.K).',
+            statements: [
+                { id: 'a', text: 'Vật liệu X là vật liệu có khả năng cách nhiệt tốt nhất trong cả 3 loại vì nó có hệ số dẫn nhiệt nhỏ nhất.', isTrue: true, exp: 'ĐÚNG. Hệ số dẫn nhiệt càng thấp chứng tỏ vật liệu cản trở sự truyền nhiệt càng tốt $\\Rightarrow$ cách nhiệt tốt.' },
+                { id: 'b', text: 'Giả sử khối lượng của các lớp lót bằng nhau, nếu đổ nước sôi vào phích, lớp lót làm bằng vật liệu Y sẽ hấp thụ ít nhiệt lượng từ nước nhất để đạt đến trạng thái cân bằng.', isTrue: false, exp: 'SAI. Nhiệt lượng hấp thụ $Q = m \\cdot c \\cdot \\Delta t$. Vật liệu nào có nhiệt dung riêng c nhỏ nhất sẽ hấp thụ ít nhiệt lượng nhất. Ở đây vật liệu Z có c = 400 J/(kg.K) (nhỏ nhất) chứ không phải Y.' },
+                { id: 'c', text: 'Khả năng dẫn nhiệt của vật liệu Y tốt gấp 40 lần so với vật liệu X.', isTrue: true, exp: 'ĐÚNG. Tỉ số hệ số dẫn nhiệt: $\\frac{0,80}{0,02} = 40$ lần.' },
+                { id: 'd', text: 'Mục đích chính của việc thiết kế vỏ phích nhiều lớp (hoặc lớp chân không) là nhằm tăng cường tốc độ truyền nhiệt từ lõi phích ra môi trường bên ngoài.', isTrue: false, exp: 'SAI. Mục đích của phích giữ nhiệt là hạn chế tối đa cả 3 hình thức truyền nhiệt (dẫn nhiệt, đối lưu, bức xạ) để giảm thiểu tốc độ truyền nhiệt ra ngoài.' }
+            ]
+        },
+        {
+            id: 'q37',
+            context: 'Sơ đồ dưới đây mô tả nguyên lý làm việc đơn giản của một máy làm mát không khí (điều hòa). Chất làm lạnh (gas) tuần hoàn liên tục qua ống dẫn nhờ một máy nén điện.',
+            statements: [
+                { id: 'a', text: 'Tại giàn lạnh đặt trong phòng, chất làm lạnh ở thể lỏng bay hơi, quá trình này thu nhiệt từ không khí trong phòng làm phòng mát đi.', isTrue: true, exp: 'ĐÚNG. Sự hóa hơi (bay hơi) của chất lỏng là quá trình thu nhiệt mạnh mẽ từ môi trường xung quanh.' },
+                { id: 'b', text: 'Tại giàn nóng đặt ngoài trời, chất làm lạnh ở thể hơi được máy nén nén lại hóa lỏng, quá trình hóa lỏng này tỏa nhiệt ra môi trường bên ngoài.', isTrue: true, exp: 'ĐÚNG. Quá trình ngưng tụ (hóa lỏng) từ thể hơi sang thể lỏng là quá trình tỏa nhiệt.' },
+                { id: 'c', text: 'Hoạt động của máy điều hòa chứng minh rằng nhiệt lượng có thể tự động truyền một cách tự nhiên từ vật lạnh (không khí trong phòng) sang vật nóng (không khí ngoài trời) mà không cần tiêu thụ năng lượng.', isTrue: false, exp: 'SAI. Theo nguyên lý 2 Nhiệt động lực học, nhiệt không thể tự động truyền từ vật lạnh sang vật nóng. Quá trình này chỉ xảy ra nhờ có sự thực hiện công của máy nén tiêu thụ điện năng.' },
+                { id: 'd', text: 'Nếu mở toang cửa phòng khi bật điều hòa, hiệu quả làm mát giảm đi rõ rệt do có hiện tượng đối lưu nhiệt mạnh mẽ giữa không khí trong phòng và ngoài trời.', isTrue: true, exp: 'ĐÚNG. Việc mở cửa tạo điều kiện cho dòng không khí nóng bên ngoài đối lưu tràn vào phòng, triệt tiêu lượng khí lạnh.' }
+            ]
+        },
+        {
+            id: 'q38',
+            context: 'Trong kỹ thuật xây dựng và đời sống, hiện tượng nở vì nhiệt của chất rắn luôn được tính toán một cách nghiêm ngặt để đảm bảo an toàn cho các công trình.',
+            statements: [
+                { id: 'a', text: 'Khi lát sân bằng các viên gạch gốm lớn, người thợ luôn để lại các khe hở nhỏ giữa các viên gạch nhằm tạo không gian cho gạch nở dài ra khi trời nắng nóng, tránh bị phồng rộp.', isTrue: true, exp: 'ĐÚNG. Các khe co giãn này ngăn chặn nội lực lớn phát sinh phá hủy cấu trúc bề mặt.' },
+                { id: 'b', text: 'Băng kép gồm hai thanh kim loại có hệ số nở dài khác nhau được tán chặt vào nhau, khi bị nung nóng nó luôn cong về phía thanh kim loại có hệ số nở dài nhỏ hơn.', isTrue: true, exp: 'ĐÚNG. Thanh có hệ số nở dài lớn hơn sẽ dài ra nhiều hơn và nằm ở vòng ngoài của đường cong, đẩy băng kép cong về phía thanh nở kém hơn.' },
+                { id: 'c', text: 'Các đường ray tàu hỏa thường được hàn liền một dải dài hàng cây số mà không cần bất kỳ khe hở hay mối nối nào vì lực nở vì nhiệt của thép rất nhỏ, không đáng kể.', isTrue: false, exp: 'SAI. Nếu không có khe hở co giãn hoặc các khớp nối kỹ thuật đặc biệt, lực nở vì nhiệt của thép khi trời nóng cực kỳ lớn, có thể làm biến dạng cong vẹo toàn bộ đường ray gây tai nạn tàu hoả.' },
+                { id: 'd', text: 'Hiện tượng cốc thủy tinh dày dễ bị nứt vỡ khi đổ nước sôi vào hơn cốc thủy tinh mỏng là do sự nở vì nhiệt không đồng đều giữa lớp thủy tinh bên trong và bên ngoài cốc.', isTrue: true, exp: 'ĐÚNG. Lớp thủy tinh bên trong nhận nhiệt từ nước sôi nở ra trước, trong khi lớp bên ngoài chưa kịp nhận nhiệt (thủy tinh dẫn nhiệt kém) nên chưa nở. Sự bất đồng bộ này gây ra ứng suất bẻ gãy thành cốc.' }
+            ]
+        },
+        {
+            id: 'q39',
+            context: 'Hình vẽ bên dưới biểu diễn hai đường đẳng tích của cùng một khối lượng khí lý tưởng xác định ở hai thể tích không đổi $V_1$ và $V_2$ trong hệ tọa độ áp suất - nhiệt độ tuyệt đối (p, T).',
+            statements: [
+                { id: 'a', text: 'Cả hai đường biểu diễn trên đồ thị đều là các đường thẳng kéo dài đi qua gốc tọa độ O.', isTrue: true, exp: 'ĐÚNG. Theo định luật Gay-Lussac (đẳng tích), $p \\sim T$, đồ thị p-T là các đường thẳng có đường kéo dài qua gốc tọa độ.' },
+                { id: 'b', text: 'Với cùng một giá trị nhiệt độ tuyệt đối $T_0$, khối khí ở trạng thái trên đường $V_1$ có áp suất lớn hơn khối khí ở trạng thái trên đường $V_2$.', isTrue: true, exp: 'ĐÚNG. Kẻ một đường thẳng đứng tại $T_0$ cắt đường $V_1$ tại điểm có áp suất $p_1$ và cắt $V_2$ tại điểm có áp suất $p_2$. Dễ dàng thấy góc cắt của $V_1$ cao hơn nên $p_1 > p_2$.' },
+                { id: 'c', text: 'Từ phương trình trạng thái ta suy ra mối quan hệ về độ lớn giữa hai thể tích trên đồ thị là $V_1 > V_2$.', isTrue: false, exp: 'SAI. Ta có $p = \\frac{nR}{V} \\cdot T$. Đường nào có độ dốc lớn hơn (nằm cao hơn) thì hệ số góc $\\frac{nR}{V}$ lớn hơn $\\Rightarrow$ thể tích V phải nhỏ hơn. Do đó $V_1 < V_2$.' },
+                { id: 'd', text: 'Nếu ta giữ cố định thể tích $V_1$ và giảm nhiệt độ tuyệt đối của khối khí xuống 2 lần thì áp suất của khí cũng giảm đi một nửa.', isTrue: true, exp: 'ĐÚNG. Do áp suất tỉ lệ thuận trực tiếp với nhiệt độ tuyệt đối T trong quá trình đẳng tích.' }
+            ]
+        },
+        {
+            id: 'q40',
+            context: 'Đọc đoạn trích sau từ báo cáo môi trường: "Bức xạ sóng ngắn từ Mặt Trời xuyên qua bầu khí quyển xuống sưởi ấm bề mặt Trái Đất. Bề mặt Trái Đất hấp thụ và bức xạ ngược lại vào không gian dưới dạng bức xạ sóng dài (tia hồng ngoại). Các phân tử khí nhà kính ($CO_2, CH_4$) hấp thụ mạnh mẽ các bức xạ sóng dài này, giữ năng lượng nhiệt lại trong tầng đối lưu."',
+            statements: [
+                { id: 'a', text: 'Quá trình truyền năng lượng từ Mặt Trời xuống Trái Đất không cần chất nền môi trường vì nó được thực hiện bằng hình thức bức xạ nhiệt.', isTrue: true, exp: 'ĐÚNG. Bức xạ nhiệt có thể truyền được trong cả môi trường chân không (vũ trụ).' },
+                { id: 'b', text: 'Nếu hàm lượng các khí nhà kính trong khí quyển tăng lên quá cao, lượng nhiệt giữ lại tăng làm nội năng của hệ Trái Đất tăng ($\\Delta U > 0$), khiến nhiệt độ toàn cầu tăng lên.', isTrue: true, exp: 'ĐÚNG. Khí nhà kính hoạt động giống như một chiếc chăn giữ nhiệt, làm cán cân năng lượng ròng lệch về phía giữ lại ($\\Delta U > 0$).' },
+                { id: 'c', text: 'Hiện tượng nóng lên toàn cầu đã tạo ra năng lượng mới làm nóng Trái Đất, điều này mâu thuẫn với Định luật bảo toàn và chuyển hóa năng lượng.', isTrue: false, exp: 'SAI. Năng lượng không tự sinh ra, nó là năng lượng Mặt Trời bị giữ lại thay vì thoát đi. Định luật bảo toàn năng lượng luôn đúng.' },
+                { id: 'd', text: 'Việc cắt giảm phát thải khí $CO_2$ và trồng rừng có vai trò làm giảm mật độ khí giữ nhiệt, tăng khả năng thoát bức xạ sóng dài ra ngoài vũ trụ của Trái Đất.', isTrue: true, exp: 'ĐÚNG. Giảm nồng độ khí nhà kính giúp "tấm chăn khí quyển" mỏng đi, nhiệt dễ thoát ra không gian hơn.' }
+              ]
             }
         ]
     },
@@ -766,7 +966,107 @@ const physicsData = {
                     { id: "c", text: "c) Khi nhiệt độ nước tăng lên, giọt thủy ngân sẽ tụt xuống sâu hơn về phía đáy ống hàn kín.", isTrue: false, exp: "Sai (Nhiệt độ tăng $\\Rightarrow V$ tăng $\\Rightarrow l$ tăng $\\Rightarrow$ giọt thủy ngân phải bị đẩy dâng LÊN cao)." },
                     { id: "d", text: "d) Đồ thị biểu diễn sự phụ thuộc của chiều dài cột không khí ($l$) vào nhiệt độ Celsius ($t^\\circ C$) theo lý thuyết là một đường thẳng đi qua gốc tọa độ.", isTrue: false, exp: "Sai (Bẫy đồ thị: Trong hệ $l - t(^\\circ C)$, đồ thị là đường thẳng có hệ số tự do (cắt trục tung tại $l_0$), đường đi qua gốc tọa độ chỉ xảy ra trong hệ nhiệt độ tuyệt đối $l - T(\\text{K})$)." }
                 ]
-            }
+            },
+			{
+            id: 'q21',
+            context: 'Một khối khí lý tưởng xác định thực hiện một quá trình biến đổi trạng thái được biểu diễn trên đồ thị tọa độ $p - V$ là một đoạn thẳng đi qua gốc tọa độ O. Khối khí biến đổi từ trạng thái 1 ($p_1, V_1, T_1$) đến trạng thái 2 ($p_2, V_2, T_2$) sao cho thể tích tăng lên.',
+            statements: [
+                { id: 'a', text: 'Đây là một quá trình đẳng áp vì đồ thị có dạng đường thẳng.', isTrue: false, exp: 'SAI. Trong hệ tọa độ $p - V$, đường đẳng áp phải là một đường thẳng song song với trục hoành V, không phải đường thẳng đi qua gốc tọa độ.' },
+                { id: 'b', text: 'Trong quá trình biến đổi này, áp suất của khối khí tỉ lệ thuận với thể tích của nó.', isTrue: true, exp: 'ĐÚNG. Mọi đường thẳng đi qua gốc tọa độ trong hệ tọa độ $p - V$ đều có phương trình dạng $p = aV$ (với a là hằng số dương), thể hiện mối quan hệ tỉ lệ thuận.' },
+                { id: 'c', text: 'Nhiệt độ tuyệt đối của khối khí tỉ lệ nghịch với thể tích của nó trong suốt quá trình.', isTrue: false, exp: 'SAI. Từ $p = aV$ và phương trình trạng thái $pV = nRT$, ta suy ra $aV^2 = nRT$, nghĩa là nhiệt độ T tỉ lệ thuận với bình phương thể tích $V^2$.' },
+                { id: 'd', text: 'Khi trạng thái khối khí dịch chuyển từ trạng thái 1 đến trạng thái 2, nhiệt độ tuyệt đối của khối khí giảm xuống.', isTrue: false, exp: 'SAI. Vì thể tích V tăng và T tỉ lệ thuận với $V^2$, nên nhiệt độ tuyệt đối của khối khí phải tăng lên khi dịch chuyển ra xa gốc tọa độ.' }
+            ]
+        },
+        {
+            id: 'q22',
+            context: 'Một lượng khí lý tưởng xác định được chứa trong một xi-lanh kín đặt thẳng đứng nhờ một pít-tông có khối lượng m, diện tích tiết diện ngang là S. Lượng khí ban đầu có thể tích $V_1$ ở nhiệt độ tuyệt đối $T_1$. Người ta nung nóng chậm khối khí đến nhiệt độ $T_2$ để pít-tông dịch chuyển tự do không ma sát lên trên. Biết áp suất khí quyển bên ngoài là $p_0$ không đổi.',
+            statements: [
+                { id: 'a', text: 'Quá trình nung nóng khối khí trong xi-lanh là quá trình đẳng tích.', isTrue: false, exp: 'SAI. Do pít-tông dịch chuyển tự do làm thể tích khí thay đổi, đây không thể là quá trình đẳng tích.' },
+                { id: 'b', text: 'Áp suất của khối khí bên trong xi-lanh trong suốt quá trình biến đổi luôn giữ giá trị ổn định là $p = p_0 + \\frac{mg}{S}$.', isTrue: true, exp: 'ĐÚNG. Do pít-tông trượt không ma sát và cân bằng áp lực chậm, áp suất khí luôn cân bằng với tổng áp suất khí quyển và áp suất do trọng lượng pít-tông gây ra.' },
+                { id: 'c', text: 'Thể tích $V_2$ của khối khí ở trạng thái 2 được xác định bằng công thức $V_2 = V_1 \\cdot \\frac{T_1}{T_2}$.', isTrue: false, exp: 'SAI. Theo định luật Charles cho quá trình đẳng áp, thể tích tỉ lệ thuận với nhiệt độ tuyệt đối, do đó phải là $V_2 = V_1 \\cdot \\frac{T_2}{T_1}$.' },
+                { id: 'd', text: 'Do khối khí nhận nhiệt lượng để dãn nở nên công mà khối khí thực hiện chống lại áp suất bên ngoài bằng 0.', isTrue: false, exp: 'SAI. Khí dãn nở đẩy pít-tông lên cao tức là khí sinh công cơ học khác 0, được tính bằng $A = p \\cdot \\Delta V$.' }
+            ]
+        },
+        {
+            id: 'q23',
+            context: 'Một bình dung tích 10 lít chứa một hỗn hợp khí lý tưởng gồm 0,2 mol khí ôxi ($O_2$) và 0,3 mol khí nitơ ($N_2$) ở cùng nhiệt độ tuyệt đối 300 K. Hằng số khí lý tưởng $R \\approx 0,082 \\text{ atm.L/(mol.K)}$.',
+            statements: [
+                { id: 'a', text: 'Áp suất riêng phần của khí ôxi tác dụng lên thành bình lớn hơn áp suất riêng phần của khí nitơ.', isTrue: false, exp: 'SAI. Áp suất riêng phần tỉ lệ thuận với số mol của khí đó trong bình, vì số mol ôxi nhỏ hơn nitơ nên áp suất riêng phần của ôxi phải nhỏ hơn.' },
+                { id: 'b', text: 'Theo định luật Dalton, áp suất tổng cộng của hỗn hợp khí bằng tổng các áp suất riêng phần của từng khí thành phần.', isTrue: true, exp: 'ĐÚNG. Đây là nội dung chính xác của định luật Dalton về áp suất hỗn hợp khí lý tưởng không phản ứng hóa học với nhau.' },
+                { id: 'c', text: 'Nếu rút toàn bộ lượng khí ôxi ra khỏi bình thì áp suất của khí nitơ còn lại trong bình sẽ tăng lên để chiếm chỗ.', isTrue: false, exp: 'SAI. Áp suất riêng phần của khí nitơ chỉ phụ thuộc vào số mol nitơ, nhiệt độ và thể tích bình, các yếu tố này không đổi nên áp suất nitơ giữ nguyên.' },
+                { id: 'd', text: 'Áp suất tổng cộng của hỗn hợp khí trong bình có giá trị xấp xỉ bằng 12,3 atm.', isTrue: false, exp: 'SAI. Sử dụng công thức $p = \\frac{n \\cdot R \\cdot T}{V} = \\frac{0,5 \\cdot 0,082 \\cdot 300}{10} = 1,23 \\text{ atm}$, giá trị 12,3 atm là sai lệch 10 lần.' }
+            ]
+        },
+        {
+            id: 'q24',
+            context: 'Một học sinh thực hiện thí nghiệm nén đẳng nhiệt một lượng khí lý tưởng xác định đựng trong một xi-lanh nhờ pít-tông biến đổi dung tích từ 6 lít xuống 2 lít. Áp suất ban đầu của khối khí là 1 atm.',
+            statements: [
+                { id: 'a', text: 'Đồ thị biểu diễn quá trình này trong hệ tọa độ (p, V) là một đường thẳng đi xuống.', isTrue: false, exp: 'SAI. Đường đẳng nhiệt trong hệ tọa độ (p, V) là một đường cong hyperbol, không phải đường thẳng.' },
+                { id: 'b', text: 'Áp suất của khối khí sau khi nén đạt giá trị 3 atm.', isTrue: true, exp: 'ĐÚNG. Theo định luật Boyle, $p_1 \\cdot V_1 = p_2 \\cdot V_2 \\Rightarrow p_2 = \\frac{1 \\cdot 6}{2} = 3 \\text{ atm}$.' },
+                { id: 'c', text: 'Trong quá trình nén, mật độ phân tử khí (số phân tử trên một đơn vị thể tích) trong xi-lanh không thay đổi.', isTrue: false, exp: 'SAI. Vì lượng khí cố định (số phân tử không đổi) nhưng thể tích giảm đi 3 lần, nên mật độ phân tử phải tăng lên 3 lần.' },
+                { id: 'd', text: 'Nếu trong quá trình nén, nhiệt độ bách phân (tính theo độ C) tăng gấp đôi thì thí nghiệm vẫn tuân theo định luật Boyle.', isTrue: false, exp: 'SAI. Định luật Boyle chỉ nghiệm đúng khi nhiệt độ tuyệt đối T được giữ cố định trong suốt quá trình biến đổi.' }
+            ]
+        },
+        {
+            id: 'q25',
+            context: 'Một bình chứa khí ôxi ($O_2$) dung tích không đổi 20 lít ở áp suất 40 atm và nhiệt độ 300 K. Sau một thời gian sử dụng do van bị rò rỉ nhẹ, một phần khí thoát ra ngoài, áp suất đo được lúc này là 20 atm và nhiệt độ bình giảm xuống còn 280 K.',
+            statements: [
+                { id: 'a', text: 'Thể tích của lượng khí còn lại trong bình giảm đi một nửa vì áp suất giảm hai lần.', isTrue: false, exp: 'SAI. Vì bình có vỏ cứng dung tích không đổi và khí luôn chiếm đầy bình, thể tích khối khí còn lại vẫn là 20 lít.' },
+                { id: 'b', text: 'Tỉ số giữa số mol khí còn lại trong bình và số mol khí ban đầu là $\\frac{14}{15}$.', isTrue: false, exp: 'SAI. Từ phương trình trạng thái: $n = \\frac{p \\cdot V}{R \\cdot T} \\Rightarrow \\frac{n_2}{n_1} = \\frac{p_2}{p_1} \\cdot \\frac{T_1}{T_2} = \\frac{20}{40} \\cdot \\frac{300}{280} = \\frac{15}{28}$, không phải $\\frac{14}{15}$.' },
+                { id: 'c', text: 'Khối lượng khí ôxi đã thoát ra ngoài chiếm khoảng 46,4% khối lượng khí ban đầu.', isTrue: true, exp: 'ĐÚNG. Tỉ lệ khí còn lại là $\\frac{15}{28} \\approx 53,6\\%$, do đó tỉ lệ khí thoát ra là $100\\% - 53,6\\% = 46,4\\%$.' },
+                { id: 'd', text: 'Không thể dùng phương trình Clapeyron-Mendeleev cho bài toán này vì khối lượng khí thay đổi.', isTrue: false, exp: 'SAI. Phương trình Clapeyron-Mendeleev áp dụng hoàn toàn bình thường cho từng trạng thái riêng biệt của khối khí với số mol tương ứng.' }
+            ]
+        },
+        {
+            id: 'q26',
+            context: 'Hai bình thủy tinh thể tích $V_1 = 3$ lít và $V_2 = 2$ lít được nối với nhau bằng một ống nhỏ có van cách nhiệt ban đầu khóa. Bình 1 chứa khí lý tưởng ở áp suất 2 atm, bình 2 chứa cùng loại khí ở áp suất 1 atm. Nhiệt độ hai bình bằng nhau và được giữ không đổi suốt quá trình. Mở van cho hai bình thông nhau.',
+            statements: [
+                { id: 'a', text: 'Sau khi mở van, khí sẽ di chuyển từ bình 2 sang bình 1 do bình 1 có thể tích lớn hơn.', isTrue: false, exp: 'SAI. Khí chuyển động từ nơi có áp suất cao sang nơi có áp suất thấp, tức là từ bình 1 (2 atm) sang bình 2 (1 atm).' },
+                { id: 'b', text: 'Áp suất cân bằng cuối cùng của hệ thống hai bình đạt giá trị bằng 1,5 atm.', isTrue: false, exp: 'SAI. Áp dụng bảo toàn lượng khí (đẳng nhiệt): $p_{\\text{cb}} \\cdot (V_1+V_2) = p_1 \\cdot V_1 + p_2 \\cdot V_2 \\Rightarrow p_{\\text{cb}} \\cdot 5 = 2 \\cdot 3 + 1 \\cdot 2 = 8 \\Rightarrow p_{\\text{cb}} = 1,6 \\text{ atm}$.' },
+                { id: 'c', text: 'Quá trình trộn khí này dựa trên nguyên lý bảo toàn tổng số mol khí của hệ trước và sau khi mở van.', isTrue: true, exp: 'ĐÚNG. Vì hệ kín và không có phản ứng, tổng số mol khí $n_{\\text{tổng}} = n_1 + n_2$ là nền tảng cốt lõi để lập phương trình áp suất.' },
+                { id: 'd', text: 'Thể tích của khối khí ở trạng thái cân bằng cuối cùng bằng hiệu thể tích hai bình $V = V_1 - V_2$.', isTrue: false, exp: 'SAI. Khi mở van thông nhau, khí chiếm toàn bộ không gian của cả hai bình nên thể tích tổng cộng phải bằng $V_1 + V_2$.' }
+            ]
+        },
+        {
+            id: 'q27',
+            context: 'Một bọt khí nhỏ hình cầu nổi lên từ đáy một hồ nước sâu 20 m lên đến sát mặt nước. Biết nhiệt độ ở đáy hồ là 7°C và ở mặt hồ là 27°C. Áp suất khí quyển trên mặt hồ là $10^5 \\text{ Pa}$. Trọng lượng riêng của nước là $10^4 \\text{ N/m}^3$. Coi bọt khí là một khối khí lý tưởng xác định.',
+            statements: [
+                { id: 'a', text: 'Áp suất tác dụng lên bọt khí khi ở đáy hồ có giá trị bằng $2 \\cdot 10^5 \\text{ Pa}$.', isTrue: false, exp: 'SAI. Áp suất ở đáy hồ bằng áp suất khí quyển cộng áp suất thủy tĩnh: $p_1 = p_0 + d \\cdot h = 10^5 + 10^4 \\cdot 20 = 3 \\cdot 10^5 \\text{ Pa}$.' },
+                { id: 'b', text: 'Quá trình nổi lên của bọt khí là quá trình đẳng nhiệt vì diễn ra trong cùng một hồ nước.', isTrue: false, exp: 'SAI. Nhiệt độ thay đổi từ 7°C (280 K) lên 27°C (300 K) nên không phải đẳng nhiệt.' },
+                { id: 'c', text: 'Khi lên đến mặt hồ, thể tích của bọt khí tăng lên gấp khoảng 3,21 lần so với thể tích ở đáy hồ.', isTrue: true, exp: 'ĐÚNG. Theo phương trình trạng thái: $\\frac{p_1 \\cdot V_1}{T_1} = \\frac{p_2 \\cdot V_2}{T_2} \\Rightarrow \\frac{V_2}{V_1} = \\frac{p_1}{p_2} \\cdot \\frac{T_2}{T_1} = \\frac{3 \\cdot 10^5}{10^5} \\cdot \\frac{300}{280} \\approx 3,21$.' },
+                { id: 'd', text: 'Lực đẩy Ác-si-mét tác dụng lên bọt khí giảm dần trong quá trình bọt khí nổi lên trên.', isTrue: false, exp: 'SAI. Do thể tích V của bọt khí tăng lên liên tục khi nổi lên, lực đẩy Ác-si-mét $F_A = d \\cdot V$ cũng phải tăng lên tương ứng.' }
+            ]
+        },
+        {
+            id: 'q28',
+            context: 'Xét một khối lượng khí lý tưởng xác định đựng trong bình hở miệng đặt trong không khí. Ban đầu không khí trong bình ở nhiệt độ phòng 27°C. Người ta đun nóng chậm bình đến nhiệt độ 127°C ở áp suất khí quyển không đổi. Bỏ qua sự nở vì nhiệt của vỏ bình.',
+            statements: [
+                { id: 'a', text: 'Quá trình biến đổi của khối khí còn lại bên trong bình là quá trình đẳng tích vì dung tích bình không đổi.', isTrue: false, exp: 'SAI. Do bình hở, một lượng khí dãn nở thoát ra ngoài nên khối lượng khí trong bình thay đổi, đây không phải quá trình đẳng tích của một khối khí xác định.' },
+                { id: 'b', text: 'Áp suất của không khí bên trong bình luôn bằng áp suất khí quyển ngoài trong suốt quá trình đun nóng.', isTrue: true, exp: 'ĐÚNG. Vì bình thông với khí quyển qua miệng hở nên áp suất bên trong luôn cân bằng với áp suất khí quyển bên ngoài.' },
+                { id: 'c', text: 'Khối lượng không khí còn lại trong bình sau khi đun nóng bằng 25% khối lượng không khí ban đầu.', isTrue: false, exp: 'SAI. Áp dụng phương trình trạng thái cho lượng khí trong bình: $m_2 \\cdot T_2 = m_1 \\cdot T_1 \\Rightarrow m_2 = m_1 \\cdot \\frac{300}{400} = 0,75 m_1$ (tương đương 75%).' },
+                { id: 'd', text: 'Mật độ phân tử khí bên trong bình tăng lên khi nhiệt độ tăng.', isTrue: false, exp: 'SAI. Do một lượng khí thoát ra ngoài, số phân tử khí trong bình giảm trong khi thể tích bình giữ nguyên, dẫn đến mật độ phân tử khí giảm.' }
+            ]
+        },
+        {
+            id: 'q29',
+            context: 'Xét chất khí dưới góc độ thuyết động học phân tử khí lý tưởng. Động năng tịnh tiến trung bình của phân tử khí liên hệ với nhiệt độ tuyệt đối qua hệ thức $\\overline{W_đ} = \\frac{3}{2}kT$, với $k \\approx 1,38 \\cdot 10^{-23} \\text{ J/K}$ là hằng số Boltzmann.',
+            statements: [
+                { id: 'a', text: 'Nhiệt độ tuyệt đối của một chất khí là đại lượng đo lường trực tiếp mức độ chuyển động hỗn loạn của các phân tử khí.', isTrue: true, exp: 'ĐÚNG. Nhiệt độ tuyệt đối tỉ lệ thuận với động năng tịnh tiến trung bình, phản ánh mức độ chuyển động nhiệt vi mô của phân tử.' },
+                { id: 'b', text: 'Hằng số Boltzmann k có giá trị thay đổi tùy thuộc vào khối lượng mol của từng loại chất khí được xét.', isTrue: false, exp: 'SAI. Hằng số Boltzmann là một hằng số vật lý phổ quát, bằng tỉ số giữa hằng số khí lý tưởng R và số Avogadro $N_A$, hoàn toàn không phụ thuộc loại khí.' },
+                { id: 'c', text: 'Ở trạng thái độ không tuyệt đối (0 K), theo lý thuyết cổ điển, mọi chuyển động nhiệt của các phân tử khí đều ngừng hẳn.', isTrue: true, exp: 'ĐÚNG. Khi T = 0 K, động năng trung bình $\\overline{W_đ} = 0$, đồng nghĩa với việc tốc độ chuyển động nhiệt vi mô bằng 0.' },
+                { id: 'd', text: 'Ở cùng một nhiệt độ phòng, phân tử khí hiđrô ($H_2$) và phân tử khí ôxi ($O_2$) có tốc độ căn quân phương (tốc độ trung bình) bằng nhau.', isTrue: false, exp: 'SAI. Do cùng nhiệt độ nên động năng trung bình bằng nhau, nhưng khối lượng phân tử hiđrô nhỏ hơn ôxi nên tốc độ của hiđrô phải lớn hơn.' }
+            ]
+        },
+        {
+            id: 'q30',
+            context: 'Một lượng khí lý tưởng thực hiện một chu trình kín $1 \\rightarrow 2 \\rightarrow 3 \\rightarrow 1$ được biểu diễn trong hệ tọa độ (V, T) như sau: Khối khí xuất phát từ trạng thái 1 biến đổi đẳng nhiệt đến trạng thái 2 ($V_2 > V_1$), sau đó biến đổi đẳng áp đến trạng thái 3 ($T_3 < T_2$), và cuối cùng biến đổi đẳng tích để quay về trạng thái 1.',
+            statements: [
+                { id: 'a', text: 'Trong quá trình $1 \\rightarrow 2$, áp suất của khối khí tăng lên.', isTrue: false, exp: 'SAI. Quá trình $1 \\rightarrow 2$ là đẳng nhiệt dãn nở ($V_2 > V_1$), theo định luật Boyle, thể tích tăng thì áp suất khí phải giảm.' },
+                { id: 'b', text: 'Đoạn đồ thị diễn tả quá trình đẳng áp $2 \\rightarrow 3$ trong hệ tọa độ (V, T) là một đoạn thẳng song song với trục nhiệt độ T.', isTrue: false, exp: 'SAI. Đường đẳng áp trong hệ (V, T) là đoạn thẳng có đường kéo dài đi qua gốc tọa độ O, không phải song song với trục T.' },
+                { id: 'c', text: 'Trong quá trình đẳng tích $3 \\rightarrow 1$, áp suất của khối khí tỉ lệ thuận với nhiệt độ tuyệt đối T.', isTrue: true, exp: 'ĐÚNG. Theo định luật Gay-Lussac cho quá trình đẳng tích, áp suất p tỉ lệ thuận với nhiệt độ tuyệt đối T.' },
+                { id: 'd', text: 'Tại trạng thái 3, thể tích của khối khí đạt giá trị nhỏ nhất trong toàn bộ chu trình.', isTrue: false, exp: 'SAI. Quá trình $3 \\rightarrow 1$ là đẳng tích nên $V_3 = V_1$. Quá trình $1 \\rightarrow 2$ dãn nở nên $V_2 > V_1$. Vậy $V_1$ và $V_3$ bằng nhau và cùng đạt giá trị nhỏ nhất, không phải duy nhất trạng thái 3.' }
+            ]
+        }
         ]
     },
     tu: {
@@ -1155,7 +1455,107 @@ const physicsData = {
                     { id: "c", text: "c) Nếu học sinh vô tình nối cuộn sơ cấp với một viên pin 9V (nguồn điện một chiều) thì bóng đèn nối ở cuộn thứ cấp sẽ sáng liên tục.", isTrue: false, exp: "Sai (Bẫy thực hành dòng DC: Dòng một chiều từ pin tạo ra từ thông không đổi, $\\Delta\\Phi = 0$ nên cuộn thứ cấp không có dòng điện cảm ứng, đèn không sáng)." },
                     { id: "d", text: "d) Nguyên tắc hoạt động của máy biến áp thí nghiệm này hoàn toàn dựa trên hiện tượng cảm ứng điện từ.", isTrue: true, exp: "Đúng (Bản chất cốt lõi của máy biến áp)." }
                 ]
-            }
+            },
+			{
+            id: 'q21',
+            context: 'Khảo sát bản chất của từ trường và đường sức từ qua các thực nghiệm. Người ta đặt kim nam châm thử, nam châm chữ U và các dây dẫn mang dòng điện để quan sát từ phổ.',
+            statements: [
+                { id: 'a', text: 'Từ trường tĩnh tĩnh có thể được tạo ra bởi các hạt mang điện tích đứng yên trong không gian.', isTrue: false, exp: 'SAI. Hạt điện tích đứng yên chỉ sinh ra điện trường tĩnh. Từ trường chỉ được sinh ra bởi các hạt điện tích chuyển động (dòng điện) hoặc nam châm.' },
+                { id: 'b', text: 'Qua bất kỳ điểm nào trong không gian có từ trường, ta cũng chỉ vẽ được một và chỉ một đường sức từ.', isTrue: true, exp: 'ĐÚNG. Vì tại mỗi điểm, vectơ cảm ứng từ $\\vec{B}$ chỉ có một hướng xác định, nên các đường sức từ không bao giờ cắt nhau.' },
+                { id: 'c', text: 'Các đường sức từ của nam châm chữ U ở khoảng không gian giữa hai cực là những đường thẳng song song và cách đều nhau.', isTrue: true, exp: 'ĐÚNG. Từ trường ở phần giữa hai cực của nam châm chữ U (khi bỏ qua hiệu ứng ở mép) là từ trường đều.' },
+                { id: 'd', text: 'Vectơ cảm ứng từ tại một điểm có hướng trùng với hướng của lực từ tác dụng lên một hạt điện tích dương đứng yên tại điểm đó.', isTrue: false, exp: 'SAI. Hạt điện tích đứng yên ($v = 0$) thì lực từ (lực Lorentz) tác dụng lên nó bằng 0. Hướng của từ trường được quy ước theo hướng nam - bắc của kim nam châm thử nằm cân bằng tại điểm đó.' }
+            ]
+        },
+        {
+            id: 'q22',
+            context: 'Một đoạn dây dẫn thẳng có chiều dài l mang dòng điện có cường độ I được đặt trong một từ trường đều có vectơ cảm ứng từ $\\vec{B}$. Gọi $\\alpha$ là góc hợp bởi chiều dòng điện và vectơ cảm ứng từ.',
+            statements: [
+                { id: 'a', text: 'Lực từ tác dụng lên đoạn dây dẫn đạt giá trị cực đại khi dây dẫn được đặt song song với các đường sức từ.', isTrue: false, exp: 'SAI. Theo công thức $F = BIl\\sin\\alpha$, khi dây song song với từ trường ($\\alpha = 0^\\circ$ hoặc $180^\\circ$), lực từ $F = 0$ (đạt cực tiểu).' },
+                { id: 'b', text: 'Chiều của lực từ tác dụng lên đoạn dây luôn vuông góc với mặt phẳng chứa đoạn dây dẫn và vectơ cảm ứng từ $\\vec{B}$.', isTrue: true, exp: 'ĐÚNG. Lực từ $\\vec{F}$ tuân theo quy tắc bàn tay trái và là tích có hướng nên nó luôn vuông góc với mặt phẳng chứa $\\vec{l}$ và $\\vec{B}$.' },
+                { id: 'c', text: 'Nếu giữ nguyên các điều kiện khác, khi cường độ dòng điện tăng 2 lần và chiều dài dây dẫn giảm 2 lần thì độ lớn lực từ không đổi.', isTrue: true, exp: 'ĐÚNG. Ta có $F\' = B \\cdot (2I) \\cdot (\\frac{l}{2}) \\cdot \\sin\\alpha = BIl\\sin\\alpha = F$.' },
+                { id: 'd', text: 'Đơn vị đo của cảm ứng từ B trong hệ SI là Tesla (T), tương đương với $1 \\text{ N}/(\\text{A} \\cdot \\text{m})$.', isTrue: true, exp: 'ĐÚNG. Từ hệ thức $B = \\frac{F}{Il\\sin\\alpha}$, ta suy ra $1 \\text{ T} = \\frac{1 \\text{ N}}{1 \\text{ A} \\cdot 1 \\text{ m}}$.' }
+            ]
+        },
+        {
+            id: 'q23',
+            context: 'Hai dây dẫn thẳng dài vô hạn, đặt song song trong không khí, cách nhau một khoảng $d = 20 \\text{ cm}$. Dây thứ nhất mang dòng điện $I_1 = 5 \\text{ A}$, dây thứ hai mang dòng điện $I_2 = 10 \\text{ A}$ chạy cùng chiều với $I_1$.',
+            statements: [
+                { id: 'a', text: 'Vì hai dây dẫn mang dòng điện chạy cùng chiều nên lực tương tác từ giữa chúng là lực đẩy.', isTrue: false, exp: 'SAI. Hai dòng điện thẳng song song chạy cùng chiều sẽ sinh ra lực hút nhau.' },
+                { id: 'b', text: 'Tập hợp các điểm có vectơ cảm ứng từ tổng hợp bằng 0 nằm trên một mặt phẳng song song với hai dây và nằm giữa hai dây.', isTrue: true, exp: 'ĐÚNG. Do dòng điện cùng chiều, từ trường của chúng ở khoảng giữa hai dây sẽ ngược chiều nhau, nên cảm ứng từ tổng hợp có thể bằng 0.' },
+                { id: 'c', text: 'Điểm có cảm ứng từ tổng hợp bằng 0 sẽ cách dây thứ nhất $10 \\text{ cm}$ và cách dây thứ hai $10 \\text{ cm}$.', isTrue: false, exp: 'SAI. Vì $I_2 > I_1$, điểm triệt tiêu từ trường phải nằm gần dây $I_1$ hơn. Ta có: $\\frac{I_1}{r_1} = \\frac{I_2}{r_2} \\Rightarrow \\frac{5}{r_1} = \\frac{10}{20-r_1} \\Rightarrow r_1 = \\frac{20}{3} \\text{ cm}$.' },
+                { id: 'd', text: 'Từ trường do dòng điện $I_1$ gây ra tại vị trí của dòng điện $I_2$ có độ lớn bằng $5 \\cdot 10^{-6} \\text{ T}$.', isTrue: true, exp: 'ĐÚNG. Áp dụng công thức: $B_1 = 2 \\cdot 10^{-7} \\cdot \\frac{I_1}{d} = 2 \\cdot 10^{-7} \\cdot \\frac{5}{0,2} = 5 \\cdot 10^{-6} \\text{ T}$.' }
+            ]
+        },
+        {
+            id: 'q24',
+            context: 'Một electron mang điện tích $q = -1,6 \\cdot 10^{-19} \\text{ C}$ bay vào một vùng từ trường đều $\\vec{B}$ với vận tốc $\\vec{v}$ có hướng vuông góc với các đường sức từ. Bỏ qua tác dụng của trọng lực.',
+            statements: [
+                { id: 'a', text: 'Dưới tác dụng của lực Lorentz, electron sẽ chuyển động theo quỹ đạo là một đường thẳng song song với các đường sức từ.', isTrue: false, exp: 'SAI. Vì $\\vec{v} \\perp \\vec{B}$, lực Lorentz đóng vai trò là lực hướng tâm, làm electron chuyển động theo quỹ đạo tròn.' },
+                { id: 'b', text: 'Lực Lorentz không sinh công, do đó động năng và tốc độ của electron trong từ trường đều được bảo toàn.', isTrue: true, exp: 'ĐÚNG. Lực Lorentz luôn vuông góc với véctơ vận tốc, công $A = F \\cdot s \\cdot \\cos(90^\\circ) = 0$.' },
+                { id: 'c', text: 'Chiều của lực Lorentz tác dụng lên electron được xác định trực tiếp bằng quy tắc bàn tay trái: chiều từ cổ tay đến ngón tay chỉ chiều $\\vec{v}$, ngón cái choãi ra $90^\\circ$ chỉ chiều lực tác dụng.', isTrue: false, exp: 'SAI. Electron mang điện âm ($q < 0$), nên chiều lực Lorentz sẽ ngược lại với chiều của ngón tay cái choãi ra theo quy tắc bàn tay trái thông thường.' },
+                { id: 'd', text: 'Bán kính quỹ đạo của electron tỉ lệ thuận với động lượng của nó và tỉ lệ nghịch với độ lớn của cảm ứng từ B.', isTrue: true, exp: 'ĐÚNG. Từ $F_L = F_{ht} \\Rightarrow |q|vB = m\\frac{v^2}{R} \\Rightarrow R = \\frac{mv}{|q|B} = \\frac{p}{|q|B}$. Động lượng $p = mv$.' }
+            ]
+        },
+        {
+            id: 'q25',
+            context: 'Một khung dây dẫn phẳng diện tích S gồm N vòng dây được đặt trong từ trường đều $\\vec{B}$. Gọi mặt phẳng khung dây hợp với vectơ $\\vec{B}$ một góc $\\alpha$. Từ thông qua khung dây ký hiệu là $\\Phi$.',
+            statements: [
+                { id: 'a', text: 'Từ thông là một đại lượng vô hướng, có thể mang giá trị dương, âm hoặc bằng không.', isTrue: true, exp: 'ĐÚNG. $\\Phi = NBS\\cos\\theta$ (với $\\theta$ là góc giữa $\\vec{B}$ và pháp tuyến $\\vec{n}$). Giá trị của $\\cos\\theta$ quyết định dấu của từ thông.' },
+                { id: 'b', text: 'Đơn vị của từ thông trong hệ SI là Weber (Wb), tương đương với $1 \\text{ T} \\cdot \\text{m}^2$.', isTrue: true, exp: 'ĐÚNG. Từ công thức $\\Phi = BS$, thứ nguyên của từ thông là Tesla nhân mét vuông.' },
+                { id: 'c', text: 'Từ thông qua khung dây đạt giá trị cực đại khi mặt phẳng khung dây đặt song song với các đường sức từ.', isTrue: false, exp: 'SAI. Khi mặt phẳng khung song song với $\\vec{B}$, góc giữa $\\vec{B}$ và pháp tuyến $\\vec{n}$ là $90^\\circ \\Rightarrow \\cos(90^\\circ) = 0 \\Rightarrow \\Phi = 0$ (cực tiểu).' },
+                { id: 'd', text: 'Nếu $\\alpha = 30^\\circ$, công thức tính từ thông qua khung dây là $\\Phi = NBS\\cos(30^\\circ)$.', isTrue: false, exp: 'SAI. Góc $\\theta$ trong công thức là góc giữa $\\vec{B}$ và pháp tuyến. Mặt phẳng hợp với $\\vec{B}$ góc $30^\\circ$ thì góc pháp tuyến $\\theta = 90^\\circ - 30^\\circ = 60^\\circ$. Công thức đúng là $\\Phi = NBS\\cos(60^\\circ)$.' }
+            ]
+        },
+        {
+            id: 'q26',
+            context: 'Hiện tượng cảm ứng điện từ được nghiên cứu thông qua thí nghiệm: Di chuyển một nam châm thẳng lại gần và ra xa một vòng dây dẫn kín nối với điện kế.',
+            statements: [
+                { id: 'a', text: 'Dòng điện cảm ứng chỉ xuất hiện trong vòng dây trong thời gian từ thông qua vòng dây biến thiên.', isTrue: true, exp: 'ĐÚNG. Đây là cốt lõi của định luật Faraday về cảm ứng điện từ. Nếu nam châm dừng lại, dòng điện sẽ biến mất.' },
+                { id: 'b', text: 'Khi đưa cực Bắc (N) của nam châm lại gần vòng dây, từ trường của dòng điện cảm ứng sinh ra sẽ có tác dụng đẩy nam châm ra xa.', isTrue: true, exp: 'ĐÚNG. Theo định luật Lenz, dòng điện cảm ứng sinh ra từ trường chống lại nguyên nhân sinh ra nó (chống lại sự dịch lại gần $\\Rightarrow$ sinh ra lực đẩy).' },
+                { id: 'c', text: 'Tốc độ dịch chuyển nam châm không ảnh hưởng đến độ lớn của suất điện động cảm ứng sinh ra trong vòng dây.', isTrue: false, exp: 'SAI. Theo định luật Faraday $|e_c| = |\\frac{\\Delta\\Phi}{\\Delta t}|$. Tốc độ dịch chuyển càng nhanh, thời gian $\\Delta t$ càng nhỏ $\\Rightarrow$ suất điện động càng lớn.' },
+                { id: 'd', text: 'Hiện tượng xuất hiện dòng điện cảm ứng trong hệ thống này là một minh chứng của định luật bảo toàn và chuyển hóa năng lượng.', isTrue: true, exp: 'ĐÚNG. Cơ năng của tay người khi di chuyển nam châm (chống lại lực từ) đã chuyển hóa thành điện năng (dòng điện cảm ứng) trong vòng dây.' }
+            ]
+        },
+        {
+            id: 'q27',
+            context: 'Hiện tượng tự cảm là một trường hợp đặc biệt của hiện tượng cảm ứng điện từ. Xét một ống dây dẫn có độ tự cảm L mắc nối tiếp với điện trở R, bóng đèn và khóa K vào một nguồn điện không đổi.',
+            statements: [
+                { id: 'a', text: 'Đơn vị của độ tự cảm L trong hệ SI là Henry (H).', isTrue: true, exp: 'ĐÚNG. Henry (H) là đơn vị chuẩn để đo hệ số tự cảm.' },
+                { id: 'b', text: 'Độ tự cảm L của ống dây tỉ lệ thuận với cường độ dòng điện chạy qua ống dây đó.', isTrue: false, exp: 'SAI. Độ tự cảm $L = 4\\pi \\cdot 10^{-7} \\cdot \\mu \\cdot \\frac{N^2}{l} S$, chỉ phụ thuộc vào cấu tạo hình học và môi trường lõi của ống dây, không phụ thuộc vào dòng điện.' },
+                { id: 'c', text: 'Khi đóng khóa K, bóng đèn mắc nối tiếp với ống dây sẽ không sáng lên ngay lập tức mà sáng lên từ từ.', isTrue: true, exp: 'ĐÚNG. Khi đóng K, dòng điện tăng làm từ thông qua ống dây tăng, sinh ra dòng điện tự cảm ngược chiều chống lại sự tăng của dòng điện chính.' },
+                { id: 'd', text: 'Hiện tượng tự cảm chỉ có thể xảy ra trong các mạch điện xoay chiều do dòng điện biến thiên liên tục.', isTrue: false, exp: 'SAI. Hiện tượng tự cảm vẫn xảy ra trong mạch điện một chiều tại các thời điểm đóng mạch (dòng điện tăng) hoặc ngắt mạch (dòng điện giảm).' }
+            ]
+        },
+        {
+            id: 'q28',
+            context: 'Đồ thị biểu diễn sự biến thiên của từ thông $\\Phi$ xuyên qua một khung dây dẫn kín có điện trở $R = 2 \\Omega$ theo thời gian t có dạng các đoạn thẳng. Cụ thể: Từ $t=0$ đến $t=2\\text{s}$, $\\Phi$ tăng đều từ $0$ lên $0,4 \\text{ Wb}$. Từ $t=2\\text{s}$ đến $t=4\\text{s}$, $\\Phi$ giữ mức $0,4 \\text{ Wb}$. Từ $t=4\\text{s}$ đến $t=5\\text{s}$, $\\Phi$ giảm đều từ $0,4 \\text{ Wb}$ về $0$.',
+            statements: [
+                { id: 'a', text: 'Trong khoảng thời gian từ $2\\text{s}$ đến $4\\text{s}$, suất điện động cảm ứng trong khung dây đạt giá trị cực đại do từ thông đang ở mức cao nhất.', isTrue: false, exp: 'SAI. Trong khoảng này từ thông không đổi ($\\Delta\\Phi = 0$), tốc độ biến thiên bằng 0 nên suất điện động cảm ứng $e_c = 0$.' },
+                { id: 'b', text: 'Độ lớn suất điện động cảm ứng xuất hiện trong khung dây ở khoảng thời gian từ $0$ đến $2\\text{s}$ là $0,2 \\text{ V}$.', isTrue: true, exp: 'ĐÚNG. $|e_c| = |\\frac{\\Delta\\Phi}{\\Delta t}| = |\\frac{0,4 - 0}{2 - 0}| = 0,2 \\text{ V}$.' },
+                { id: 'c', text: 'Cường độ dòng điện cảm ứng chạy qua khung dây trong khoảng thời gian từ $4\\text{s}$ đến $5\\text{s}$ có độ lớn là $0,2 \\text{ A}$.', isTrue: true, exp: 'ĐÚNG. Suất điện động $|e_c| = |\\frac{0 - 0,4}{5 - 4}| = 0,4 \\text{ V}$. Cường độ dòng điện $I_c = \\frac{e_c}{R} = \\frac{0,4}{2} = 0,2 \\text{ A}$.' },
+                { id: 'd', text: 'Chiều của dòng điện cảm ứng xuất hiện trong khoảng $0-2\\text{s}$ và khoảng $4-5\\text{s}$ là cùng chiều nhau.', isTrue: false, exp: 'SAI. Ở $0-2\\text{s}$, từ thông tăng. Ở $4-5\\text{s}$, từ thông giảm. Theo định luật Lenz, chiều dòng điện cảm ứng ở hai giai đoạn này phải ngược nhau để chống lại nguyên nhân sinh ra nó.' }
+            ]
+        },
+        {
+            id: 'q29',
+            context: 'Khảo sát năng lượng từ trường của một ống dây dài mang dòng điện. Ống dây có hệ số tự cảm $L = 50 \\text{ mH}$. Người ta tăng từ từ cường độ dòng điện chạy qua ống dây từ $0 \\text{ A}$ đến $4 \\text{ A}$.',
+            statements: [
+                { id: 'a', text: 'Năng lượng từ trường tích lũy trong ống dây tỉ lệ thuận với bình phương cường độ dòng điện chạy qua nó.', isTrue: true, exp: 'ĐÚNG. Công thức tính năng lượng từ trường của ống dây là $W = \\frac{1}{2}LI^2$, cho thấy sự tỉ lệ bậc hai.' },
+                { id: 'b', text: 'Năng lượng từ trường tích lũy tối đa trong ống dây khi dòng điện đạt $4 \\text{ A}$ là $0,4 \\text{ J}$.', isTrue: true, exp: 'ĐÚNG. Đổi $L = 50 \\text{ mH} = 0,05 \\text{ H}$. Áp dụng công thức: $W = \\frac{1}{2} \\cdot 0,05 \\cdot 4^2 = \\frac{1}{2} \\cdot 0,05 \\cdot 16 = 0,4 \\text{ J}$.' },
+                { id: 'c', text: 'Năng lượng từ trường bên trong ống dây thực chất là tổng động năng của các electron tự do chuyển động trong dây dẫn.', isTrue: false, exp: 'SAI. Năng lượng từ trường là năng lượng lưu trữ dưới dạng trường vật lý (từ trường) trong không gian bên trong lõi ống dây, không phải là động năng hạt.' },
+                { id: 'd', text: 'Nếu quấn thêm số vòng dây lên gấp đôi trên cùng một ống dây có chiều dài không đổi (cùng dòng điện 4A), năng lượng từ trường sẽ tăng lên gấp 2 lần.', isTrue: false, exp: 'SAI. Độ tự cảm $L$ tỉ lệ với $N^2$. Khi $N$ tăng 2 lần $\\Rightarrow L$ tăng 4 lần. Vậy năng lượng từ trường $W = 0,5LI^2$ sẽ tăng 4 lần chứ không phải 2 lần.' }
+            ]
+        },
+        {
+            id: 'q30',
+            context: 'Một chiếc xe tải hạng nặng di chuyển trên đường đèo được trang bị hệ thống phanh điện từ. Hệ thống này gồm các đĩa kim loại dày gắn với trục bánh xe, quay trong một vùng từ trường của nam châm điện có thể điều chỉnh cường độ.',
+            statements: [
+                { id: 'a', text: 'Hoạt động của phanh điện từ dựa trên nguyên lý cảm ứng điện từ sinh ra dòng điện Foucault (dòng điện xoáy) trong đĩa phanh kim loại.', isTrue: true, exp: 'ĐÚNG. Khi đĩa kim loại quay cắt các đường sức từ, từ thông qua các tiết diện đĩa thay đổi, sinh ra dòng điện cảm ứng bên trong khối kim loại gọi là dòng Foucault.' },
+                { id: 'b', text: 'Lực từ do từ trường tác dụng lên dòng Foucault sinh ra một mô-men lực cùng chiều quay của bánh xe để hỗ trợ xe vượt dốc.', isTrue: false, exp: 'SAI. Theo định luật Lenz, dòng Foucault sinh ra từ trường chống lại nguyên nhân sinh ra nó (sự quay). Nên mô-men lực sinh ra phải ngược chiều chuyển động để cản trở sự quay (phanh xe).' },
+                { id: 'c', text: 'Khi hệ thống phanh điện từ hoạt động, một phần lớn động năng của xe tải được chuyển hóa thành nhiệt năng làm nóng đĩa phanh.', isTrue: true, exp: 'ĐÚNG. Dòng Foucault chạy quẩn trong khối đĩa kim loại có điện trở sẽ tỏa nhiệt rất mạnh theo định luật Joule-Lenz.' },
+                { id: 'd', text: 'Ưu điểm của phanh điện từ so với phanh ma sát cơ học là nó không gây mài mòn đĩa phanh, rất phù hợp khi xe đổ đèo liên tục.', isTrue: true, exp: 'ĐÚNG. Lực hãm sinh ra hoàn toàn thông qua trường điện từ mà không có sự tiếp xúc cơ học nào, tránh được hiện tượng cháy má phanh khi ma sát quá nhiệt.' }
+            ]
+        }
         ]
     },
    hatnhan: {
@@ -1544,7 +1944,107 @@ const physicsData = {
                     { id: "c", text: "c) Khi thí nghiệm kết thúc, chỉ cần để các viên phóng xạ vào tủ kính trưng bày của lớp học để các bạn khác tiện quan sát.", isTrue: false, exp: "Sai (Bẫy an toàn thực tiễn: Các nguồn phóng xạ BẮT BUỘC phải được cất vào hộp chì chuyên dụng và khóa cẩn thận, không được để phơi sáng ở tủ kính thường)." },
                     { id: "d", text: "d) Học sinh muốn che chắn hoàn toàn tia bức xạ $\\gamma$ phát ra từ nguồn thì chỉ cần dùng một tấm nhôm dày khoảng $5\\text{ mm}$ là đủ.", isTrue: false, exp: "Sai (Tấm nhôm $5\\text{ mm}$ cản được tia $\\beta$ nhưng gần như vô dụng với tia $\\gamma$. Để cản tia $\\gamma$ cần các tấm chì (Pb) dày hàng cm)." }
                 ]
-            }
+            },
+			{
+            id: 'q21',
+            context: 'Xét cấu tạo và năng lượng liên kết của hai hạt nhân: Sắt ($_{26}^{56}\\text{Fe}$) và Uranium ($_{92}^{235}\\text{U}$). Sắt được biết đến là một trong những hạt nhân bền vững nhất trong tự nhiên.',
+            statements: [
+                { id: 'a', text: 'Hạt nhân Sắt ($_{26}^{56}\\text{Fe}$) được cấu tạo từ 26 proton và 56 neutron.', isTrue: false, exp: 'SAI. Số khối A = 56, số proton Z = 26. Số neutron N = A - Z = 56 - 26 = 30 neutron.' },
+                { id: 'b', text: 'Năng lượng liên kết của một hạt nhân là năng lượng tỏa ra khi các nucleon riêng rẽ (tự do) liên kết lại với nhau tạo thành hạt nhân đó.', isTrue: true, exp: 'ĐÚNG. Theo định nghĩa, năng lượng liên kết là năng lượng cần thiết để tách hạt nhân thành các nucleon riêng rẽ, hoặc ngược lại, là năng lượng tỏa ra khi ghép chúng lại.' },
+                { id: 'c', text: 'Hạt nhân Uranium ($_{92}^{235}\\text{U}$) có tổng năng lượng liên kết lớn hơn hạt nhân Sắt ($_{26}^{56}\\text{Fe}$) nên Uranium bền vững hơn Sắt.', isTrue: false, exp: 'SAI. Dù tổng năng lượng liên kết của U-235 lớn hơn, nhưng sự bền vững của hạt nhân được quyết định bởi "Năng lượng liên kết riêng" (Năng lượng liên kết chia cho số khối A). Fe-56 có năng lượng liên kết riêng lớn nhất (khoảng 8,8 MeV/nucleon).' },
+                { id: 'd', text: 'Khối lượng của một hạt nhân luôn nhỏ hơn tổng khối lượng của các nucleon tạo thành nó khi ở trạng thái tự do.', isTrue: true, exp: 'ĐÚNG. Đây là hiện tượng độ hụt khối ($\\Delta m > 0$). Phần khối lượng hao hụt này đã chuyển hóa thành năng lượng liên kết theo hệ thức Einstein $E = \\Delta m \\cdot c^2$.' }
+            ]
+        },
+        {
+            id: 'q22',
+            context: 'Một mẫu chất phóng xạ Radon ($^{222}\\text{Rn}$) nguyên chất có chu kì bán rã là $T = 3,8$ ngày. Ban đầu ($t = 0$) mẫu có khối lượng $m_0$.',
+            statements: [
+                { id: 'a', text: 'Hằng số phóng xạ của Radon-222 là $\\lambda = \\frac{\\ln 2}{3,8} \\text{ ngày}^{-1}$.', isTrue: true, exp: 'ĐÚNG. Công thức liên hệ giữa hằng số phóng xạ và chu kì bán rã là $\\lambda = \\frac{\\ln 2}{T}$.' },
+                { id: 'b', text: 'Sau khoảng thời gian 7,6 ngày, khối lượng Radon-222 còn lại trong mẫu là $0,25 m_0$.', isTrue: true, exp: 'ĐÚNG. 7,6 ngày tương đương 2 chu kì bán rã ($2T$). Khối lượng còn lại $m = m_0 \\cdot 2^{-2} = 0,25 m_0$.' },
+                { id: 'c', text: 'Khối lượng của các hạt nhân con được tạo thành tăng tỉ lệ thuận bậc nhất (tuyến tính) theo thời gian.', isTrue: false, exp: 'SAI. Khối lượng hạt nhân con tạo thành tuân theo hàm mũ: $m_{\\text{con}} = m_0 \\cdot (1 - e^{-\\lambda t})$, đây là đường cong tăng dần và tiến về tiệm cận $m_0$, không phải đường thẳng.' },
+                { id: 'd', text: 'Nếu nung nóng mẫu Radon này lên nhiệt độ rất cao, chu kì bán rã của nó sẽ giảm xuống khiến nó phân rã nhanh hơn.', isTrue: false, exp: 'SAI. Phóng xạ là quá trình biến đổi bên trong hạt nhân, hoàn toàn không bị ảnh hưởng bởi các yếu tố môi trường bên ngoài như nhiệt độ, áp suất hay trạng thái hóa học.' }
+            ]
+        },
+        {
+            id: 'q23',
+            context: 'Đồng vị Polonium ($_{84}^{210}\\text{Po}$) phóng xạ tia $\\alpha$ và biến đổi thành hạt nhân Chì ($_{82}^{206}\\text{Pb}$) bền vững. Phương trình phản ứng: $_{84}^{210}\\text{Po} \\rightarrow \\alpha + _{82}^{206}\\text{Pb}$.',
+            statements: [
+                { id: 'a', text: 'Tia $\\alpha$ phát ra trong phản ứng này thực chất là dòng các hạt nhân Helium ($_{2}^{4}\\text{He}$).', isTrue: true, exp: 'ĐÚNG. Hạt $\\alpha$ gồm 2 proton và 2 neutron, chính là hạt nhân nguyên tử Helium-4.' },
+                { id: 'b', text: 'Hạt nhân con Chì ($_{82}^{206}\\text{Pb}$) có ít hơn hạt nhân mẹ Polonium 2 proton và 4 neutron.', isTrue: false, exp: 'SAI. Số proton giảm 2 ($84 - 82 = 2$). Số khối giảm 4, nghĩa là tổng số hạt giảm 4. Vậy số neutron chỉ giảm 2 ($4 - 2 = 2$).' },
+                { id: 'c', text: 'Tổng khối lượng nghỉ của hạt $\\alpha$ và hạt nhân Chì tạo thành nhỏ hơn khối lượng nghỉ của hạt nhân Polonium ban đầu.', isTrue: true, exp: 'ĐÚNG. Phân rã phóng xạ là phản ứng tỏa năng lượng. Để tỏa năng lượng, khối lượng nghỉ lúc sau phải nhỏ hơn khối lượng nghỉ lúc trước (độ hụt khối tổng cộng).' },
+                { id: 'd', text: 'Năng lượng tỏa ra từ phản ứng này chủ yếu chuyển hóa thành bức xạ điện từ (tia gamma) chứ không làm các hạt chuyển động.', isTrue: false, exp: 'SAI. Năng lượng tỏa ra chủ yếu biến thành động năng của hạt $\\alpha$ và hạt nhân giật lùi (Chì). Tia gamma chỉ xuất hiện nếu hạt nhân con ở trạng thái kích thích.' }
+            ]
+        },
+        {
+            id: 'q24',
+            context: 'Sự phân rã beta trừ ($\\beta^-$) của Đồng vị Carbon-14 ($_{6}^{14}\\text{C}$) tạo ra đồng vị Nitrogen ($_{7}^{14}\\text{N}$). Carbon-14 là đồng vị phóng xạ được dùng để định tuổi các cổ vật.',
+            statements: [
+                { id: 'a', text: 'Tia phóng xạ $\\beta^-$ mang điện tích âm, thực chất là một dòng các electron bay ra với tốc độ rất lớn.', isTrue: true, exp: 'ĐÚNG. Hạt $\\beta^-$ ký hiệu là $_{-1}^{0}\\text{e}$, chính là các electron bắn ra từ hạt nhân.' },
+                { id: 'b', text: 'Bản chất của phóng xạ $\\beta^-$ là một neutron trong hạt nhân mẹ đã biến đổi thành một proton, một electron và một phản neutrino.', isTrue: true, exp: 'ĐÚNG. Phương trình vi mô: $n \\rightarrow p + e^- + \\bar{\\nu}_e$. Điều này giải thích vì sao số proton tăng 1 mà số khối không đổi.' },
+                { id: 'c', text: 'Sau khi phóng xạ $\\beta^-$, số khối của hạt nhân con nhỏ hơn số khối của hạt nhân mẹ.', isTrue: false, exp: 'SAI. Carbon-14 và Nitrogen-14 đều có số khối A = 14. Số khối được bảo toàn trong phân rã beta.' },
+                { id: 'd', text: 'Khả năng đâm xuyên của tia $\\beta^-$ yếu hơn khả năng đâm xuyên của tia $\\alpha$ trong cùng một môi trường vật chất.', isTrue: false, exp: 'SAI. Tia $\\beta$ (electron) nhẹ và di chuyển cực nhanh, khả năng đâm xuyên của nó mạnh gấp hàng trăm lần tia $\\alpha$ (hạt nặng và cồng kềnh).' }
+            ]
+        },
+        {
+            id: 'q25',
+            context: 'Trong lò phản ứng hạt nhân, quá trình phân hạch của Uranium-235 diễn ra khi nó hấp thụ một neutron chậm (neutron nhiệt). Một trong các phản ứng tiêu biểu: $_{0}^{1}\\text{n} + _{92}^{235}\\text{U} \\rightarrow _{56}^{144}\\text{Ba} + _{36}^{89}\\text{Kr} + 3_{0}^{1}\\text{n} + 200\\text{ MeV}$.',
+            statements: [
+                { id: 'a', text: 'Phản ứng phân hạch trên là một quá trình phóng xạ tự nhiên, tự phát xảy ra mà không cần tác động bên ngoài.', isTrue: false, exp: 'SAI. Phân hạch của U-235 là phản ứng hạt nhân kích thích, cần phải có chùm neutron bắn phá (hấp thụ neutron) mới xảy ra.' },
+                { id: 'b', text: 'Neutron nhiệt (neutron chuyển động chậm) có xác suất kích thích U-235 phân hạch cao hơn so với neutron nhanh.', isTrue: true, exp: 'ĐÚNG. Neutron bay quá nhanh sẽ dễ dàng xuyên qua hạt nhân mà không bị bắt lại. Để tăng hiệu suất phân hạch, lò phản ứng phải dùng chất làm chậm.' },
+                { id: 'c', text: 'Việc sinh ra 3 neutron mới sau phản ứng là điều kiện kiên quyết để có thể duy trì phản ứng phân hạch dây chuyền.', isTrue: true, exp: 'ĐÚNG. Các neutron thứ cấp này sẽ tiếp tục bắn phá các hạt U-235 khác, duy trì phản ứng tự phát tạo ra năng lượng liên tục.' },
+                { id: 'd', text: 'Hệ số nhân neutron (k) trong lò phản ứng hạt nhân thương mại luôn được duy trì ở mức k > 1 để phát điện ổn định.', isTrue: false, exp: 'SAI. Để lò hoạt động ổn định và an toàn, hệ số nhân neutron phải được duy trì ở trạng thái tới hạn k = 1. Nếu k > 1, phản ứng bùng phát không kiểm soát gây nổ.' }
+            ]
+        },
+        {
+            id: 'q26',
+            context: 'Phản ứng nhiệt hạch (phản ứng tổng hợp hạt nhân) là nguồn gốc năng lượng của Mặt Trời và các vì sao. Phản ứng hứa hẹn nhất trên Trái Đất là sự kết hợp giữa Deuterium ($_{1}^{2}\\text{H}$) và Tritium ($_{1}^{3}\\text{H}$).',
+            statements: [
+                { id: 'a', text: 'Phản ứng nhiệt hạch cần nhiệt độ cực kì cao (hàng chục triệu độ) để thắng được lực đẩy Coulomb giữa các hạt mang điện tích dương.', isTrue: true, exp: 'ĐÚNG. Ở nhiệt độ cao, các hạt nhân có động năng cực lớn mới có thể tiến lại đủ gần nhau để lực hạt nhân (lực hút mạnh) phát huy tác dụng.' },
+                { id: 'b', text: 'Năng lượng tỏa ra tính trên một hạt nucleon (năng lượng riêng) của phản ứng nhiệt hạch nhỏ hơn nhiều so với phản ứng phân hạch.', isTrue: false, exp: 'SAI. Dù một phản ứng phân hạch tỏa ~200 MeV (lớn hơn 17,6 MeV của nhiệt hạch), nhưng xét trên mỗi nucleon (chia cho A), nhiệt hạch tỏa năng lượng lớn hơn phân hạch nhiều lần.' },
+                { id: 'c', text: 'Sản phẩm của phản ứng giữa Deuterium và Tritium là hạt nhân Helium-4 và một hạt neutron.', isTrue: true, exp: 'ĐÚNG. Phương trình: $_{1}^{2}\\text{H} + _{1}^{3}\\text{H} \\rightarrow _{2}^{4}\\text{He} + _{0}^{1}\\text{n}$.' },
+                { id: 'd', text: 'Nhà máy điện nhiệt hạch tạo ra lượng rác thải phóng xạ chu kì sống dài tương đương với lò phản ứng phân hạch hiện nay.', isTrue: false, exp: 'SAI. Sản phẩm chính là Helium (khí trơ không phóng xạ). Nhiệt hạch được xem là nguồn năng lượng "sạch" vì ít rác thải phóng xạ và vật liệu dồi dào từ nước biển.' }
+            ]
+        },
+        {
+            id: 'q27',
+            context: 'Hệ thức năng lượng - khối lượng của Einstein ($E = mc^2$) khẳng định sự tương đương giữa khối lượng và năng lượng. Khảo sát hiện tượng hủy cặp: Một electron và một positron (phản electron) va chạm và hủy nhau để sinh ra 2 photon tia gamma ($\\gamma$). Biết khối lượng nghỉ của electron/positron là $m_e = 9,1 \\cdot 10^{-31} \\text{ kg}$.',
+            statements: [
+                { id: 'a', text: 'Tổng điện tích của hệ trước và sau khi xảy ra hiện tượng hủy cặp bằng 0.', isTrue: true, exp: 'ĐÚNG. Electron ($q = -e$) và positron ($q = +e$) có tổng điện tích bằng 0. Photon tia gamma không mang điện.' },
+                { id: 'b', text: 'Tổng khối lượng nghỉ của hệ được bảo toàn trong quá trình phản ứng này.', isTrue: false, exp: 'SAI. Toàn bộ khối lượng nghỉ của 2 hạt ($2m_e$) đã biến mất hoàn toàn để chuyển hóa thành năng lượng của các photon bức xạ.' },
+                { id: 'c', text: 'Giả sử động năng ban đầu của các hạt không đáng kể, tổng năng lượng của hai photon tia gamma sinh ra bằng $2m_e c^2$.', isTrue: true, exp: 'ĐÚNG. Áp dụng định luật bảo toàn năng lượng toàn phần, năng lượng nghỉ ban đầu hoàn toàn chuyển thành năng lượng bức xạ của các photon.' },
+                { id: 'd', text: 'Photon tia gamma bức xạ ra là các hạt mang điện chuyển động với vận tốc ánh sáng c.', isTrue: false, exp: 'SAI. Photon tia gamma là lượng tử năng lượng bức xạ điện từ, chúng di chuyển với tốc độ c nhưng KHÔNG mang điện tích và không có khối lượng nghỉ.' }
+            ]
+        },
+        {
+            id: 'q28',
+            context: 'Đồng vị Carbon-14 được sử dụng để xác định tuổi của các di tích khảo cổ có nguồn gốc sinh học. Chu kì bán rã của C-14 là $T = 5730$ năm. Khi đo đạc một mẫu gỗ cổ, người ta thấy tỉ số giữa số nguyên tử C-14 và C-12 chỉ bằng $12,5\\%$ so với tỉ số đó trong một cây gỗ cùng loại đang sống.',
+            statements: [
+                { id: 'a', text: 'Trong cơ thể sinh vật đang sống, tỉ lệ C-14 và C-12 liên tục giảm đi do C-14 bị phân rã theo thời gian.', isTrue: false, exp: 'SAI. Khi sinh vật còn sống, quá trình hô hấp và ăn uống giúp hấp thụ C-14 từ môi trường, bù đắp lượng phân rã nên tỉ lệ này giữ ở mức cân bằng không đổi.' },
+                { id: 'b', text: 'Con số $12,5\\%$ chứng tỏ hàm lượng C-14 trong mẫu gỗ cổ đã giảm đi 8 lần so với lúc sinh vật bắt đầu chết.', isTrue: true, exp: 'ĐÚNG. $12,5\\% = \\frac{12,5}{100} = \\frac{1}{8}$. Mức C-14 còn lại bằng 1/8 so với ban đầu.' },
+                { id: 'c', text: 'Thời gian mẫu gỗ này tồn tại kể từ khi cây chết (tuổi của mẫu vật) đã trải qua đúng 4 chu kì bán rã.', isTrue: false, exp: 'SAI. Khối lượng còn lại $m = m_0 \\cdot 2^{-n}$. Ta có $\\frac{1}{8} = 2^{-3} \\Rightarrow n = 3$. Mẫu vật đã trải qua 3 chu kì bán rã, không phải 4.' },
+                { id: 'd', text: 'Tuổi của mẫu gỗ cổ này được xác định chính xác là 17.190 năm.', isTrue: true, exp: 'ĐÚNG. Thời gian = số chu kì $\\times$ chu kì bán rã = $3 \\times 5730 = 17190$ năm.' }
+            ]
+        },
+        {
+            id: 'q29',
+            context: 'Khảo sát định luật bảo toàn trong phản ứng hạt nhân. Người ta dùng hạt $\\alpha$ bắn phá hạt nhân Nhôm ($_{13}^{27}\\text{Al}$) đứng yên để tạo ra hạt nhân Phốtpho ($_{15}^{30}\\text{P}$) và một hạt $X$. Phương trình: $\\alpha + _{13}^{27}\\text{Al} \\rightarrow _{15}^{30}\\text{P} + X$.',
+            statements: [
+                { id: 'a', text: 'Dựa vào định luật bảo toàn, hạt X có số khối A = 1 và điện tích Z = 0, suy ra X là hạt neutron.', isTrue: true, exp: 'ĐÚNG. Bảo toàn điện tích: $2 + 13 = 15 + Z \\Rightarrow Z = 0$. Bảo toàn số khối: $4 + 27 = 30 + A \\Rightarrow A = 1$. Hạt $X (0, 1)$ là neutron.' },
+                { id: 'b', text: 'Trong bất kì phản ứng hạt nhân nào, định luật bảo toàn khối lượng cổ điển (tổng khối lượng trước = tổng khối lượng sau) luôn được nghiệm đúng.', isTrue: false, exp: 'SAI. Phản ứng hạt nhân có sự chuyển hóa giữa khối lượng và năng lượng (độ hụt khối), nên tổng khối lượng nghỉ không được bảo toàn.' },
+                { id: 'c', text: 'Phản ứng này đảm bảo sự bảo toàn tổng số hạt nucleon và bảo toàn tổng điện tích của hệ.', isTrue: true, exp: 'ĐÚNG. Đây là hai trong bốn định luật bảo toàn cơ bản của phản ứng hạt nhân (bảo toàn số khối A và bảo toàn điện tích Z).' },
+                { id: 'd', text: 'Do hạt $\\alpha$ mang điện dương nên nó có thể dễ dàng đi vào hạt nhân Al mà không gặp bất cứ lực cản nào.', isTrue: false, exp: 'SAI. Hạt $\\alpha$ (+2e) và hạt nhân Al (+13e) cùng mang điện dương nên đẩy nhau rất mạnh. Hạt $\\alpha$ phải có động năng rất lớn để vượt qua rào thế Coulomb.' }
+            ]
+        },
+        {
+            id: 'q30',
+            context: 'Ứng dụng đồng vị phóng xạ trong y học: Iodine-131 ($T = 8$ ngày) được sử dụng để chẩn đoán và điều trị bệnh cường giáp và ung thư tuyến giáp. Hạt nhân này phát ra cả bức xạ $\\beta^-$ và bức xạ $\\gamma$.',
+            statements: [
+                { id: 'a', text: 'I-131 có chức năng sinh học giống hệt Iodine bền tự nhiên nên cơ thể hấp thụ và tập trung nó tại tuyến giáp.', isTrue: true, exp: 'ĐÚNG. Các đồng vị của cùng một nguyên tố có tính chất hóa học và sinh học giống hệt nhau, cơ thể không thể phân biệt được chúng.' },
+                { id: 'b', text: 'Tia $\\gamma$ phát ra có sức đâm xuyên rất mạnh, có thể đi xuyên qua cơ thể bệnh nhân ra ngoài để các thiết bị y tế ghi nhận hình ảnh.', isTrue: true, exp: 'ĐÚNG. Bức xạ gamma xuyên thấu tốt được dùng để chụp xạ hình (imaging), giúp bác sĩ định vị chính xác kích thước khối u.' },
+                { id: 'c', text: 'Vì chu kì bán rã là 8 ngày, nên sau đúng 1 tháng (32 ngày), toàn bộ lượng I-131 trong cơ thể bệnh nhân sẽ biến mất hoàn toàn (về 0).', isTrue: false, exp: 'SAI. Sau 32 ngày (4 chu kì bán rã), độ phóng xạ giảm xuống còn $\\frac{1}{2^4} = \\frac{1}{16}$ so với ban đầu. Nó tiệm cận 0 chứ không bao giờ biến mất hoàn toàn trong thời gian hữu hạn.' },
+                { id: 'd', text: 'Các hạt $\\beta^-$ phát ra di chuyển được quãng đường rất ngắn trong mô (vài mm) và phá hủy các tế bào bệnh cục bộ mà không làm tổn thương các cơ quan xa.', isTrue: true, exp: 'ĐÚNG. Đây là cơ sở của xạ trị đích. Tia beta truyền toàn bộ năng lượng ion hóa mạnh mẽ trong phạm vi hẹp, tiêu diệt mô tuyến giáp bị bệnh mà không ảnh hưởng diện rộng.' }
+            ]
+        }
         ]
     }
 };
