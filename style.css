@@ -93,13 +93,132 @@ body {
 }
 
 /* Question Cards */
+/* =========================================
+   NÂNG CẤP GIAO DIỆN CÂU HỎI & PHƯƠNG ÁN CAO CẤP
+   ========================================= */
+
+/* 1. Thiết kế lại Thẻ câu hỏi (Question Card) */
 .question-card {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
+    border-top: 4px solid var(--primary-color); /* Tạo điểm nhấn thanh lịch bằng đường kẻ màu xanh phía trên */
     border-radius: 12px;
     padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hiệu ứng nhô lên nhẹ khi học sinh tập trung nhìn vào câu hỏi */
+.question-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+
+/* 2. Làm nổi bật phần Đề bài (Question Context) */
+.question-context {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--text-main);
+    margin-bottom: 1.25rem;
+    background: #f1f5f9; /* Màu nền xám nhẹ giúp cô lập phần đề bài với phần đáp án */
+    padding: 0.8rem 1.25rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-hover); /* Vạch xanh đậm bên trái tạo phong cách tài liệu chuẩn hóa */
+}
+
+/* 3. Tối ưu các Hộp Phương án (Statement Box) thành các nút tương tác */
+.statement {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Hiệu ứng cuốn hút: Khi học sinh rà chuột qua phương án, hộp sẽ nhích nhẹ sang phải và đổi nền sang xanh da trời cực dịu mắt */
+.statement:hover {
+    background-color: #f0f7ff; 
+    border-color: #93c5fd;
+    transform: translateX(4px); 
+}
+
+/* Kỹ thuật CSS hiện đại: Tự động đổi màu nền sang màu xanh nhẹ khi học sinh TÍCH CHỌN (Đúng hoặc Sai) để báo hiệu trạng thái đã làm */
+.statement:has(input:checked) {
+    background-color: #eff6ff;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 1px #3b82f6;
+}
+
+/* 4. Định dạng lại khu vực nút bấm Đúng / Sai */
+.stmt-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+}
+
+.options {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Biến các chữ Đúng / Sai thô thành các nhãn nút bấm bo góc xinh xắn */
+.options label {
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Hiệu ứng khi rà chuột riêng vào ô Đúng/Sai */
+.options label:hover {
+    background: #e2e8f0;
+    color: var(--text-main);
+}
+
+/* Khi ô tròn radio được chọn, nhãn chữ tương ứng sẽ sáng lên */
+.options input[type="radio"]:checked + span,
+.options label:has(input:checked) {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* 5. Giữ nguyên màu nền kết quả chuẩn của thầy nhưng đổ màu mịn màng hơn */
+.statement.correct {
+    background-color: var(--correct-bg) !important;
+    border-color: var(--correct-border) !important;
+}
+
+.statement.wrong {
+    background-color: var(--wrong-bg) !important;
+    border-color: var(--wrong-border) !important;
+}
+
+/* Khung hiển thị lời giải chi tiết (Sau khi bấm Kiểm tra) */
+.stmt-explanation {
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px 16px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: #334155;
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.02);
 }
 
 .question-context {
