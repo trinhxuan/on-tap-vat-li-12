@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Hàm render bài tập
+   // Hàm render bài tập (Đã thêm tính năng tự động dọn dẹp chữ trùng lặp)
     window.renderQuizzes = function(quizzes) {
         if (!quizzes || quizzes.length === 0) {
             contentArea.innerHTML = '<div class="question-card"><p>Dữ liệu bài tập đang được cập nhật...</p></div>';
@@ -67,16 +67,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let html = '<div class="quiz-intro"><h3>Bài tập trắc nghiệm Đúng/Sai</h3><p>Hãy đọc kỹ từng phát biểu và chọn đáp án của bạn.</p></div>';
         
-        html += quizzes.map((quiz, index) => `
+        html += quizzes.map((quiz, index) => {
+            // Tự động cắt bỏ chữ "Câu X:" bị lặp ở đầu đề bài (nếu có)
+            let cleanContext = quiz.context.replace(/^Câu\s*\d+\s*[:\-\.]*\s*/i, '');
+
+            return `
             <div class="question-card" id="card_${quiz.id}">
                 <div class="question-context">
-                    <span class="q-badge">Câu ${index + 1}</span> ${quiz.context}
+                    <span class="q-badge">Câu ${index + 1}</span> ${cleanContext}
                 </div>
                 <div class="statements-container">
-                    ${quiz.statements.map(stmt => `
+                    ${quiz.statements.map(stmt => {
+                        // Tự động cắt bỏ chữ "a)", "a.", "A)" bị lặp ở đầu các ý (nếu có)
+                        let cleanText = stmt.text.replace(/^[a-d]\s*[)\.]\s*/i, '');
+                        
+                        return `
                         <div class="statement" id="stmt_${quiz.id}_${stmt.id}">
                             <div class="stmt-row">
-                                <div class="statement-text">${stmt.text}</div>
+                                <div class="statement-text"><strong>${stmt.id})</strong> ${cleanText}</div>
                                 <div class="options">
                                     <label class="opt-btn btn-true">
                                         <input type="radio" name="ans_${quiz.id}_${stmt.id}" value="true">
@@ -89,19 +97,19 @@ document.addEventListener('DOMContentLoaded', () => {
                                 </div>
                             </div>
                             <div class="stmt-explanation" id="exp_${quiz.id}_${stmt.id}">
-                                <strong>💡 Giải thích:</strong> ${stmt.exp || "Chưa có lời giải chi tiết cho ý này."}
                             </div>
                         </div>
-                    `).join('')}
+                        `;
+                    }).join('')}
                 </div>
                 <button class="btn-check" onclick="checkAnswers('${quiz.id}')">Kiểm tra kết quả</button>
                 <div class="result-summary" id="summary_${quiz.id}"></div>
             </div>
-        `).join('');
+            `;
+        }).join('');
         
         contentArea.innerHTML = html;
     };
-
     // Logic kiểm tra và hiển thị giải thích
     window.checkAnswers = function(quizId) {
     const quizData = physicsData[currentTopic].quizzes.find(q => q.id === quizId);
